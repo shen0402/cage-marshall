@@ -1,4 +1,8 @@
-<div class="page-width" data-section-id="{{ section.id }}" data-section-type="cart-template" data-ajax-enabled="{{ section.settings.cart_ajax_enable }}">
+<div
+  class="page-width"
+  data-section-id="{{ section.id }}"
+  data-section-type="cart-template"
+  data-ajax-enabled="{{ section.settings.cart_ajax_enable }}">
 
   <div {% if cart.item_count == 0 %}class="hide"{% endif %}data-cart-wrapper>
     <div class="cart-header">
@@ -7,7 +11,10 @@
 
     </div>
 
-    <form action="{{ routes.cart_url }}" method="post" class="cart">
+    <form
+      action="{{ routes.cart_url }}"
+      method="post"
+      class="cart">
       <table>
         <thead class="cart__row cart__row--heading">
           <th scope="col">{{ 'cart.label.product' | t }}
@@ -21,15 +28,29 @@
         </thead>
         <tbody data-cart-line-items>
           {%- for item in cart.items -%}
-            <tr class="cart__row" data-cart-item data-cart-item-key="{{ item.key }}" data-cart-item-url="{{ item.url }}" data-cart-item-title="{{ item.title }}" data-cart-item-index="{{ forloop.index }}" data-cart-item-quantity="{{ item.quantity }}">
+            <tr
+              class="cart__row"
+              data-cart-item
+              data-cart-item-key="{{ item.key }}"
+              data-cart-item-url="{{ item.url }}"
+              data-cart-item-title="{{ item.title }}"
+              data-cart-item-index="{{ forloop.index }}"
+              data-cart-item-quantity="{{ item.quantity }}">
               <td class="cart__meta small--text-left" data-cart-table-cell>
                 <div class="cart__product-information">
                   <div class="cart__image-wrapper">
-                    <img class="cart__image{% if item.image == null %} hide{% endif %}" src="{{ item | img_url: 'x190' }}" alt="{{ item.image.alt | escape }}" data-cart-item-image>
+                    <img
+                      class="cart__image{% if item.image == null %} hide{% endif %}"
+                      src="{{ item | img_url: 'x190' }}"
+                      alt="{{ item.image.alt | escape }}"
+                      data-cart-item-image>
                   </div>
                   <div>
                     <div class="list-view-item__title">
-                      <a href="{{ item.url }}" class="cart__product-title" data-cart-item-title>
+                      <a
+                        href="{{ item.url }}"
+                        class="cart__product-title"
+                        data-cart-item-title>
                         {{ item.product.title }}
                       </a>
                     </div>
@@ -40,7 +61,10 @@
                     {%- endif -%}
                     {%- assign property_size = item.properties | size -%}
 
-                    <ul class="product-details{% if item.product.has_only_default_variant and property_size == 0 %} hide{% endif %}" data-cart-item-details aria-label="{{ 'cart.label.product_details' | t }}">
+                      <ul
+                      class="product-details{% if item.product.has_only_default_variant and property_size == 0 %} hide{% endif %}"
+                      data-cart-item-details
+                      aria-label="{{ 'cart.label.product_details' | t }}">
                       {%- for option in variant_options -%}
                         <li class="product-details__item product-details__item--variant-option{% if item.product.has_only_default_variant %} hide{% endif %}" data-cart-item-option>{{ option.name }}
                           :
@@ -49,13 +73,13 @@
                       {%- endfor -%}
 
                       {%- comment -%}
-                        Optional, loop through custom product line items if available
+                      Optional, loop through custom product line items if available
 
-                        Line item properties come in as having two parts. The first part will be passed with the default form,
-                        but p.last is the actual custom property and may be blank. If it is, don't show it.
+                      Line item properties come in as having two parts. The first part will be passed with the default form,
+                      but p.last is the actual custom property and may be blank. If it is, don't show it.
 
-                        For more info on line item properties, visit:
-                        - http://docs.shopify.com/support/your-store/products/how-do-I-collect-additional-information-on-the-product-page-Like-for-a-monogram-engraving-or-customization
+                      For more info on line item properties, visit:
+                      - http://docs.shopify.com/support/your-store/products/how-do-I-collect-additional-information-on-the-product-page-Like-for-a-monogram-engraving-or-customization
                       {%- endcomment -%}
 
                       {%- assign properties = 'template ' | split: ' ' -%}
@@ -71,7 +95,7 @@
                             </span>
 
                             {%- comment -%}
-                              Check if there was an uploaded file associated
+                            Check if there was an uploaded file associated
                             {%- endcomment -%}
                             <span data-cart-item-property-value>
                               {%- if p.last contains '/uploads/' -%}
@@ -87,7 +111,11 @@
                     </ul>
 
                     <p class="cart__remove">
-                      <a href="/cart/change?line={{ forloop.index }}&amp;quantity=0" class="jc-cart-remove text-link text-link--accent" aria-label="{{ 'cart.label.remove' | t: product: item.title }}" data-cart-remove>{{ 'cart.general.remove' | t }}
+                      <a
+                        href="/cart/change?line={{ forloop.index }}&amp;quantity=0"
+                        class="jc-cart-remove text-link text-link--accent"
+                        aria-label="{{ 'cart.label.remove' | t: product: item.title }}"
+                        data-cart-remove>{{ 'cart.general.remove' | t }}
                       </a>
                     </p>
                   </div>
@@ -103,7 +131,7 @@
                 <div data-cart-item-price>
                   <dl data-cart-item-price-list>
                     {%- comment -%}
-                      Markup template for discount item
+                    Markup template for discount item
                     {%- endcomment -%}
                     <div {% unless hasDiscount %}class="hide"{% endunless %}data-cart-item-discounted-price-group>
                       <dt>
@@ -125,7 +153,7 @@
                     </div>
 
                     {%- comment -%}
-                      Markup template for regular price item
+                    Markup template for regular price item
                     {%- endcomment -%}
                     <div {% if hasDiscount %}class="hide"{% endif %}data-cart-item-regular-price-group>
                       <dt>
@@ -138,7 +166,7 @@
                     </div>
 
                     {%- comment -%}
-                      Markup template for unit price
+                    Markup template for unit price
                     {%- endcomment -%}
                     <div {% unless item.unit_price_measurement %}class="hide"{% endunless %}data-unit-price-group>
                       <dt>
@@ -175,7 +203,10 @@
                   {%- assign itemDiscounts = item.line_level_discount_allocations -%}
                 {%- endif -%}
 
-                <ul class="order-discount order-discount--list order-discount--title order-discount--cart{% if item.line_level_discount_allocations == blank %} hide{% endif %}" aria-label="{{ 'customer.order.discount' | t }}" data-cart-item-discount-list>
+                <ul
+                  class="order-discount order-discount--list order-discount--title order-discount--cart{% if item.line_level_discount_allocations == blank %} hide{% endif %}"
+                  aria-label="{{ 'customer.order.discount' | t }}"
+                  data-cart-item-discount-list>
                   {%- for discount_allocation in itemDiscounts -%}
                     <li class="order-discount__item" data-cart-item-discount>
                       {% include 'icon-saletag' %}
@@ -189,12 +220,28 @@
                 </ul>
 
                 <div class="cart__qty medium-up--hide">
-                  <label for="updates_{{ item.key }}" class="cart__qty-label" aria-label="{{ 'cart.label.quantity' | t }}" data-quantity-label-mobile>
+                  <label
+                    for="updates_{{ item.key }}"
+                    class="cart__qty-label"
+                    aria-label="{{ 'cart.label.quantity' | t }}"
+                    data-quantity-label-mobile>
                     {{ 'cart.label.qty' | t }}
                   </label>
-                  <input id="updates_{{ item.key }}" class="cart__qty-input" type="number" value="{{ item.quantity }}" min="0" pattern="[0-9]*" data-quantity-input data-quantity-item="{{ forloop.index }}" data-quantity-input-mobile>
+                  <input
+                    id="updates_{{ item.key }}"
+                    class="cart__qty-input"
+                    type="number"
+                    value="{{ item.quantity }}"
+                    min="0"
+                    pattern="[0-9]*"
+                    data-quantity-input
+                    data-quantity-item="{{ forloop.index }}"
+                    data-quantity-input-mobile>
                 </div>
-                <div class="cart__qty-error-message-wrapper cart__qty-error-message-wrapper--mobile hide" role="alert" data-cart-quantity-error-message-wrapper>
+                <div
+                  class="cart__qty-error-message-wrapper cart__qty-error-message-wrapper--mobile hide"
+                  role="alert"
+                  data-cart-quantity-error-message-wrapper>
                   <span class="visually-hidden">{{ 'general.accessibility.error' | t }}
                   </span>
                   {% include 'icon-error' %}
@@ -203,11 +250,27 @@
               </td>
               <td class="cart__quantity-td text-right small--hide">
                 <div class="cart__qty">
-                  <label for="updates_large_{{ item.key }}" class="cart__qty-label" data-quantity-label-desktop>{{ 'cart.label.quantity' | t }}
+                  <label
+                    for="updates_large_{{ item.key }}"
+                    class="cart__qty-label"
+                    data-quantity-label-desktop>{{ 'cart.label.quantity' | t }}
                   </label>
-                  <input id="updates_large_{{ item.key }}" class="cart__qty-input" type="number" name="updates[]" value="{{ item.quantity }}" min="0" pattern="[0-9]*" data-quantity-input data-quantity-item="{{ forloop.index }}" data-quantity-input-desktop>
+                  <input
+                    id="updates_large_{{ item.key }}"
+                    class="cart__qty-input"
+                    type="number"
+                    name="updates[]"
+                    value="{{ item.quantity }}"
+                    min="0"
+                    pattern="[0-9]*"
+                    data-quantity-input
+                    data-quantity-item="{{ forloop.index }}"
+                    data-quantity-input-desktop>
                 </div>
-                <div class="cart__qty-error-message-wrapper cart__qty-error-message-wrapper--desktop hide" role="alert" data-cart-quantity-error-message-wrapper>
+                <div
+                  class="cart__qty-error-message-wrapper cart__qty-error-message-wrapper--desktop hide"
+                  role="alert"
+                  data-cart-quantity-error-message-wrapper>
                   <span class="visually-hidden">{{ 'general.accessibility.error' | t }}
                   </span>
                   {% include 'icon-error' %}
@@ -216,7 +279,7 @@
               </td>
               <td class="cart__final-price text-right small--hide" data-cart-item-line-price>
                 {%- comment -%}
-                  Markup template for discount item
+                Markup template for discount item
                 {%- endcomment -%}
                 <dl {% unless item.original_line_price != item.final_line_price %}class="hide"{% endunless %}data-cart-item-discounted-price-group>
                   <dt>
@@ -238,7 +301,7 @@
                 </dl>
 
                 {%- comment -%}
-                  Markup template for regular price item
+                Markup template for regular price item
                 {%- endcomment -%}
                 <div {% if item.original_line_price != item.final_line_price %}class="hide"{% endif %}data-cart-item-regular-price-group>
                   <span data-cart-item-regular-price>{{ item.original_line_price | money }}
@@ -256,7 +319,11 @@
             <div class="grid__item medium-up--one-half cart-note">
               <label for="CartSpecialInstructions" class="cart-note__label small--text-center">{{ 'cart.general.note' | t }}
               </label>
-              <textarea name="note" id="CartSpecialInstructions" class="cart-note__input" data-cart-notes>{{ cart.note }}
+              <textarea
+                name="note"
+                id="CartSpecialInstructions"
+                class="cart-note__input"
+                data-cart-notes>{{ cart.note }}
               </textarea>
             </div>
           {%- endif -%}
@@ -266,7 +333,7 @@
             {%- if cart.cart_level_discount_applications.size > 0 -%}
               {%- assign cartDiscounts = cart.cart_level_discount_applications -%}
             {%- endif -%}
-            <div {% if cart.cart_level_discount_applications.size == 0 %}class="hide" {% endif %} data-cart-discount-wrapper>
+            <div {% if cart.cart_level_discount_applications.size == 0 %}class="hide"{% endif %} data-cart-discount-wrapper>
               <div class="order-discount-card-wrapper" data-cart-discount>
                 {%- for discount_application in cartDiscounts -%}
                   <span class="order-discount order-discount--title order-discount--cart">
@@ -309,39 +376,36 @@
 
               <p class="cart-additional-info-text cart-additional-info-text-b">ADDITIONAL DETAILS</p>
 
-              <p class="cart-attribute__field">
-                <label>Do you currently have an interview scheduled or are you anticipating an upcoming interview?</label>
-                <input type="radio" name="attributes[Do you currently have an interview scheduled or are you anticipating an upcoming interview?]" value="Yes" {% if cart.attributes["Do you currently have an interview scheduled or are you anticipating an upcoming interview?"] == "Yes" %} checked{% endif %}>
-                <span>Yes</span><br>
-                <input type="radio" name="attributes[Do you currently have an interview scheduled or are you anticipating an upcoming interview?]" value="No" {% if cart.attributes["Do you currently have an interview scheduled or are you anticipating an upcoming interview?"] == "No" %} checked{% endif %}>
-                <span>No</span><br>
-              </p>
-
 
               <p class="cart-attribute__field">
-                <label for="if-yes-please-specify-which-airline-and-date-of-anticipated-interview">If yes, please specify which airline and date of anticipated interview.
+                <label for="if-yes-please-specify-which-airline-and-date-of-anticipated-interview">Do you currently have an interview scheduled or are you anticipating an upcoming interview? If yes, please specify which airline and date of anticipated interview.
                 </label>
-                <input id="if-yes-please-specify-which-airline-and-date-of-anticipated-interview" type="text" name="attributes[If yes, please specify which airline and date of anticipated interview. ]" value="{{ cart.attributes["If yes, please specify which airline and date of anticipated interview. "] }}">
+                <textarea
+                  name="note"
+                  id="CartSpecialInstructions"
+                  class="cart-note__input"
+                  data-cart-notes>{{ cart.note }}
+                </textarea>
               </p>
 
               <p class="cart-additional-info-text">Thank you for your interest in our authentic, individual, and personalized consulting services. Your support, continued referrals, and patronage are appreciated and very important to us.</p>
 
-              {%comment%}
-                <p class="cart-additional-info-text cart-additional-info-text-b">Due to a higher-than-normal demand for our reputable services, we are currently wait-listing new clients to maintain our high quality of service and accessibility to your consultant. To avoid any confusion, we ask that you visit our <a href="/pages/waitlist">Waitlist FAQ page</a> and review the information prior to purchasing.</p>
-              {%endcomment%}
+              {% comment %}
+              <p class="cart-additional-info-text cart-additional-info-text-b">Due to a higher-than-normal demand for our reputable services, we are currently wait-listing new clients to maintain our high quality of service and accessibility to your consultant. To avoid any confusion, we ask that you visit our <a href="/pages/waitlist">Waitlist FAQ page</a> and review the information prior to purchasing.</p>
+              {% endcomment %}
               <p class="cart-additional-info-text">The Cage Marshall Consulting Team is working around the clock to make accommodations for all pilots interested in our services and we recognize the importance of this monumental event in your career. Thank you for your trust in our services and allowing us to be a part of your career journey.</p>
 
 
-              {%comment%}
+              {% comment %}
               <div class="cart-attribute__field cart-attribute__field-flex">
-                <input type="hidden" name="attributes[Checkout acknowledgement]" value="No">
-                <div class="cart-attribute-flex-col">
-                  <input required class="required" type="checkbox" name="attributes[Checkout acknowledgement]" value="Yes">
-                </div>
-
-                <label>I understand that by purchasing the Pilot Interview Preparation Package or Hourly Consulting Services that I may be waitlisted. I acknowledge that there is a possibility that an appointment may not be available prior to my given airline interview.</label>
+              <input type="hidden" name="attributes[Checkout acknowledgement]" value="No">
+              <div class="cart-attribute-flex-col">
+              <input required class="required" type="checkbox" name="attributes[Checkout acknowledgement]" value="Yes">
               </div>
-              {%endcomment%}
+
+              <label>I understand that by purchasing the Pilot Interview Preparation Package or Hourly Consulting Services that I may be waitlisted. I acknowledge that there is a possibility that an appointment may not be available prior to my given airline interview.</label>
+              </div>
+              {% endcomment %}
 
 
             </div>
@@ -349,12 +413,23 @@
             <div class="cart__buttons-container">
               <div class="cart__submit-controls">
                 {%- unless section.settings.cart_ajax_enable -%}
-                  <input type="submit" name="update" class="cart__submit btn btn--secondary jc-cart-submit-btn" value="Checkout">
+                  <input
+                    type="submit"
+                    name="update"
+                    class="cart__submit btn btn--secondary jc-cart-submit-btn"
+                    value="Checkout">
                 {%- endunless -%}
-                <input type="submit" name="checkout" class="cart__submit btn btn--small-wide jc-cart-submit-btn" value="Checkout">
+                <input
+                  type="submit"
+                  name="checkout"
+                  class="cart__submit btn btn--small-wide jc-cart-submit-btn"
+                  value="Checkout">
               </div>
 
-              <div class="cart__error-message-wrapper hide" role="alert" data-cart-error-message-wrapper>
+              <div
+                class="cart__error-message-wrapper hide"
+                role="alert"
+                data-cart-error-message-wrapper>
                 <span class="visually-hidden">{{ 'general.accessibility.error' | t }}
                 </span>
                 {% include 'icon-error' %}
@@ -371,7 +446,11 @@
       </div>
     </form>
 
-    <p class="visually-hidden" data-cart-status aria-live="polite" role="status"></p>
+    <p
+      class="visually-hidden"
+      data-cart-status
+      aria-live="polite"
+      role="status"></p>
   </div>
 
   <div class="jc-empty-page-content empty-page-content{% if cart.item_count > 0 %} hide{% endif %} text-center" data-empty-page-content>

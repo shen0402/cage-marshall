@@ -5461,11 +5461,13 @@ body {
   margin-bottom: 10px;
   font-size: 16px;
   line-height: 25px;
+  text-align: center;
 }
 
 .cart-additional-info-wrapper textarea {
   max-width: 100%;
   width: 100%;
+  min-height: 100px;
 }
 
 .cart-attribute__field {
