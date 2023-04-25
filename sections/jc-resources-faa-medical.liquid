@@ -1,0 +1,64 @@
+<div class="bottom-content-block-resources">
+  <div class="bottom-heading-wrapper-resources">
+    <h4 class="bottom-heading-resources">{{section.settings.heading_text}}</h4>
+    <div class="bottom-heading-breaker-resources"></div>
+  </div>
+  <div class="bottom-content-holder-resources">
+    <p class="bottom-content-text-heading-resources">{{section.settings.sub_heading_text}}</p>
+    <div class="bottom-flex-row-resources center">
+
+     {% for block in section.blocks %}
+       <div class="bottom-flex-col-resources">
+         <a href="{{block.settings.resource_url}}" class="bottom-flex-link-resources w-inline-block" target="_blank">
+           <div>{{block.settings.resource_name}}</div>
+         </a>
+       </div>
+     {% endfor %}
+      
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "FAA Medical - Resources" ,
+
+  "settings": [
+      {
+         "type": "text",
+         "id": "heading_text",
+         "default": "FAA Medical",
+         "label": "Heading Text"
+      },
+      {
+         "type": "textarea",
+         "id": "sub_heading_text",
+         "default": "These are links where you can find your FAA medical exam results.",
+         "label": "Sub Heading Text"
+      }
+
+  ],
+  
+  "blocks": [
+    {
+      "type": "text",
+      "name": "FAA Medical Resource",
+      "settings": [
+        
+        {
+          "label": "Name",
+          "id": "resource_name",
+          "type": "text"
+        },
+        {
+          "label": "Resource URL",
+          "id": "resource_url",
+          "type": "url"
+        }
+        
+
+      ]
+    }
+  ]
+}
+{% endschema %}

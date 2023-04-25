@@ -1,0 +1,86 @@
+
+<div class="hero-wrapper-login"></div>
+<div class="mid-wrapper-login">
+  <div class="mid-heading-wrapper-login">
+    <h1 class="hero-heading-login">Client Login</h1>
+  </div>
+  <div class="form-block-login w-form">
+    <div class="form-design-block-login"></div>
+
+    {% form 'customer_login' %}
+      
+      <div class="form-top-wrapper-login">
+        <div class="form-img-wrapper-contact"><img src="//cdn.shopify.com/s/files/1/0065/3987/0244/files/cage-mark-white-min.png" alt="Cage Marshall Mark" class="form-img-contact"></div>
+        {{ form.errors | default_errors }}
+        <div class="form-input-wrapper-login"><input type="email" class="form-input-login w-input" maxlength="256" name="customer[email]" placeholder="Email*" id="CustomerEmail" required=""></div>
+        <div class="form-input-wrapper-login"><input type="password" class="form-input-login w-input" maxlength="256" name="customer[password]" placeholder="Password*" id="CustomerPassword" required=""></div>
+      </div>
+      <div class="form-btn-wrapper"><input type="submit" value="Login" data-wait="Please wait..." class="form-btn w-button"></div>
+      <div class="form-bottom-wrapper-login">
+        <a href="#" class="form-bottom-link-login form-bottom-link-login-top w-inline-block" data-ix="form-show-pw">
+          <div>Forgot your password?</div>
+        </a>
+        <a href="/account/register" class="form-bottom-link-login w-inline-block">
+          <div>Create Account</div>
+        </a>
+      </div>
+    {% endform %}
+    
+  </div>
+
+
+  <div class="form-block-forgot-pw w-form">
+    <div class="form-design-block-login"></div>
+    
+    {% form 'recover_customer_password' %}
+      <div class="form-top-wrapper-login">
+        <div class="form-img-wrapper-contact"><img src="//cdn.shopify.com/s/files/1/0065/3987/0244/files/cage-mark-white-min.png" alt="Cage Marshall Mark" class="form-img-contact"></div>
+        {% if form.errors %}
+             {{ form.errors | default_errors }}
+        {% endif %}
+        <div class="form-forgot-pw-text">We will send you an email to reset your password.</div>
+        <div class="form-input-wrapper-login"><input type="email" class="form-input-login w-input" maxlength="256" name="email" placeholder="Email*" id="CustomerEmail" required=""></div>
+      </div>
+      <div class="form-btn-wrapper"><input type="submit" value="Submit" data-wait="Please wait..." class="form-btn w-button"></div>
+      <div class="form-bottom-wrapper-login">
+        <a href="#" class="form-bottom-link-login w-inline-block" data-ix="form-cancel">
+          <div>Cancel</div>
+        </a>
+      </div>
+    {% endform %}
+
+  </div>
+
+
+</div> <!-- mid-wrapper-login -->
+
+
+
+{% comment %}
+{% form 'customer_login' %}
+  <h1 class="form-heading-login">Login</h1>
+  {{ form.errors | default_errors }}
+  <input type="email" class="form-input-login w-input" maxlength="256" name="customer[email]" placeholder="Email Address" id="CustomerEmail" required=""><input type="password" class="form-input-login w-input" maxlength="256" name="customer[password]" placeholder="Password" id="CustomerPassword" required="">
+  <div class="form-btn-wrapper-login"><input type="submit" value="Sign In" data-wait="Please wait..." class="btn-main w-button"></div>
+  <div class="form-bottom-wrapper-login">
+    <a href="#" class="form-bottom-link-login w-inline-block" data-ix="form-show-pw">
+      <div>Forgot your password?</div>
+    </a>
+    <a href="/account/register" class="form-bottom-link-login w-inline-block">
+      <div>Create Account</div>
+    </a>
+  </div>
+{% endform %}
+
+<h2 class="form-heading-login-alt">Reset your password</h2>
+<p class="form-sub-heading-login">We will send you an email to reset your password.</p><input type="email" class="form-input-login w-input" maxlength="256" name="email" placeholder="Email Address" id="RecoverEmail" required="">
+<div class="form-btn-wrapper-login"><input type="submit" value="Submit" data-wait="Please wait..." class="btn-main w-button"></div>
+<div class="form-bottom-wrapper-login">
+  <a href="#" class="form-bottom-link-login w-inline-block" data-ix="form-cancel">
+    <div>Cancel</div>
+  </a>
+</div>
+
+
+{% endcomment %}
+

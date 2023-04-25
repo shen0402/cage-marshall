@@ -1,0 +1,39 @@
+<div class="mid-wrapper-resources">
+    <div class="container-small">
+      <div class="top-wrapper-resources">
+        <h1 class="mid-heading-resources">Online Career Resources For Pilots</h1>
+        <div class="mid-breaker-resources"></div>
+        <div class="mid-text-holder-resources">
+          <p class="mid-text-service">Helping pilots find career opportunities.</p>
+        </div>
+      </div>
+      <div class="bottom-wrapper-resources">
+
+        {% section 'jc-resources-applications' %}
+        {% section 'jc-resources-airlines' %}
+        {% section 'jc-resources-corporate-charter' %}
+        {% section 'jc-resources-drone-jobs' %}
+        {% section 'jc-resources-government-jobs' %}
+        {% section 'jc-resources-misc-jobs' %}
+        {% section 'jc-resources-corporate-resources' %}
+        {% section 'jc-resources-organizations' %}
+        {% section 'jc-resources-flight-training' %}
+        {% section 'jc-resources-logbook' %}
+        {% section 'jc-resources-faa-medical' %}
+        {% section 'jc-resources-passport' %}
+        {% section 'jc-resources-paperwork' %}
+
+      </div>
+    </div>
+  </div>
+
+<script type="text/javascript">
+  $(document).ready(function() { 
+
+    $('.bottom-list-rte-resources a').each(function(i, obj) {
+        $(this).attr('target',"_blank");
+    });
+
+   });
+</script>
+

@@ -1,0 +1,75 @@
+<div class="bottom-section-news">
+  <div class="bottom-content-holder-news">
+    <div class="bottom-content-block-news">
+      <div class="bottom-flex-heading-wrapper-news">
+        <h4 class="bottom-flex-heading-news">UPCOMING INDUSTRY EVENTS</h4>
+        <div class="bottom-flex-heading-breaker-news"></div>
+      </div>
+      <div class="content-block-bottom-wrapper-news">
+
+
+        {% for block in section.blocks %}
+          <div class="content-flex-row-news">
+            <div class="content-flex-col-news-1"><a href="{{block.settings.event_url}}" class="content-flex-col-img-news w-inline-block" target="_blank"><img src="//cdn.shopify.com/s/files/1/0065/3987/0244/files/info-min.png" alt="Info" class="content-flex-img-news"></a></div>
+            <div class="content-flex-col-news-2">
+              <h5 class="content-flex-col-title-news">{{block.settings.event_name}}</h5>
+            </div>
+            <div class="content-flex-col-news-3">
+              <div class="content-flex-col-date-news">{{block.settings.event_date}}</div>
+            </div>
+            <div class="content-flex-col-news-4">
+              <div class="content-flex-col-date-news">{{block.settings.event_location}}</div>
+            </div>
+          </div>
+        {% endfor %}
+
+
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+{% schema %}
+{
+  "name": "Events" ,
+  
+  "blocks": [
+    {
+      "type": "text",
+      "name": "Event",
+      "settings": [
+        
+        {
+          "label": "Event Name",
+          "id": "event_name",
+          "type": "text"
+        },
+        {
+          "label": "Event Date",
+          "id": "event_date",
+          "type": "text"
+        },
+        {
+          "label": "Event Location",
+          "id": "event_location",
+          "type": "text"
+        },
+        {
+           "label": "Event URL",
+           "id": "event_url", 
+           "type": "url"
+        }
+
+      ]
+    }
+  ]
+}
+{% endschema %}
+
+
+
+

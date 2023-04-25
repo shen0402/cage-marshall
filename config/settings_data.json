@@ -1,0 +1,2041 @@
+{
+  "current": {
+    "color_text": "#3d4246",
+    "color_body_text": "#69727b",
+    "color_sale_text": "#557b97",
+    "color_button": "#557b97",
+    "color_button_text": "#fff",
+    "color_small_button_text_border": "#3d4246",
+    "color_text_field_text": "#000",
+    "color_text_field_border": "#949494",
+    "color_text_field": "#fff",
+    "color_image_overlay_text": "#fff",
+    "color_image_overlay": "#3d4246",
+    "image_overlay_opacity": 40,
+    "color_borders": "#e8e9eb",
+    "color_body_bg": "#fff",
+    "type_header_font": "work_sans_n6",
+    "type_header_base_size": 26,
+    "type_base_font": "work_sans_n4",
+    "type_base_size": 16,
+    "type_bold_product_titles": false,
+    "share_image": "",
+    "share_facebook": true,
+    "share_twitter": true,
+    "share_pinterest": true,
+    "social_twitter_link": "",
+    "social_facebook_link": "",
+    "social_pinterest_link": "",
+    "social_instagram_link": "",
+    "social_tumblr_link": "",
+    "social_snapchat_link": "",
+    "social_youtube_link": "",
+    "social_vimeo_link": "",
+    "favicon": "shopify:\/\/shop_images\/favicon_570919d8-e859-4691-b5d4-ce3fe3a643d4.png",
+    "enable_ajax": true,
+    "checkout_header_image": "",
+    "checkout_logo_image": "",
+    "checkout_logo_position": "left",
+    "checkout_logo_size": "medium",
+    "checkout_body_background_image": "",
+    "checkout_body_background_color": "#fff",
+    "checkout_input_background_color_mode": "white",
+    "checkout_sidebar_background_image": "",
+    "checkout_sidebar_background_color": "#fafafa",
+    "checkout_heading_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+    "checkout_body_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+    "checkout_accent_color": "#197bbd",
+    "checkout_button_color": "#197bbd",
+    "checkout_error_color": "#e32c2b",
+    "sections": {
+      "header": {
+        "type": "header",
+        "settings": {
+          "align_logo": "left",
+          "logo": "",
+          "logo_max_width": 100,
+          "main_linklist": "main-menu",
+          "message": false,
+          "home_page_only": true,
+          "message_text": "Announce something here",
+          "message_link": "",
+          "color_bg": "#7796a8",
+          "color_text": "#fff"
+        }
+      },
+      "hero": {
+        "type": "hero",
+        "settings": {
+          "image": "",
+          "alignment": "center",
+          "hero_layout": "full_width",
+          "hero_size": "medium",
+          "text_size": "large",
+          "title": "Image with text overlay",
+          "text": "<p>Use overlay text to give your customers insight into your brand. Select imagery and text that relates to your style and story.<\/p>",
+          "button_label": "",
+          "button_link": ""
+        }
+      },
+      "slideshow": {
+        "type": "slideshow",
+        "blocks": {
+          "slideshow-0": {
+            "type": "image",
+            "settings": {
+              "image": "",
+              "alignment": "center center",
+              "slide_title": "Image slide",
+              "subheading": "Tell your brand's story through images",
+              "button_label": "",
+              "button_link": ""
+            }
+          },
+          "slideshow-1": {
+            "type": "image",
+            "settings": {
+              "image": "",
+              "alignment": "center center",
+              "slide_title": "Image slide",
+              "subheading": "Tell your brand's story through images",
+              "button_label": "",
+              "button_link": ""
+            }
+          }
+        },
+        "block_order": [
+          "slideshow-0",
+          "slideshow-1"
+        ],
+        "settings": {
+          "slideshow_height": "adapt",
+          "text_size": "medium",
+          "text_alignment": "center center",
+          "show_overlay": true,
+          "autorotate": false,
+          "autorotate_speed": 5
+        }
+      },
+      "featured-collections": {
+        "type": "collection",
+        "settings": {
+          "title": "Featured collection",
+          "collection": "frontpage",
+          "grid": 3,
+          "rows": 2,
+          "show_vendor": false,
+          "show_view_all": false
+        }
+      },
+      "feature-row": {
+        "type": "feature-row",
+        "settings": {
+          "image": "",
+          "layout": "left",
+          "title": "Image with text",
+          "text": "<p>Pair large text with an image to give focus to your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+          "button_label": "",
+          "button_link": ""
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "blocks": {
+          "link_list": {
+            "type": "link_list",
+            "settings": {
+              "title": "Quick links",
+              "menu": "footer"
+            }
+          },
+          "text": {
+            "type": "text",
+            "settings": {
+              "title": "Talk about your business",
+              "text": "<p>Share store details, promotions, or brand content with your customers.<\/p>"
+            }
+          },
+          "newsletter": {
+            "type": "newsletter",
+            "settings": {
+              "title": "Newsletter"
+            }
+          }
+        },
+        "block_order": [
+          "link_list",
+          "text",
+          "newsletter"
+        ],
+        "settings": {
+          "show_payment_icons": false,
+          "color_footer_bg": "#f5f5f5",
+          "color_footer_text": "#3d4246"
+        }
+      },
+      "jc-header": {
+        "type": "jc-header",
+        "settings": {
+          "announcement_text": "<p>we are Having Tech issues with our Contact form. please email us directly at info@cageconsulting.com for more information on our services.<\/p>"
+        }
+      },
+      "jc-footer": {
+        "type": "jc-footer",
+        "settings": {
+        }
+      },
+      "jc-testimonial-section": {
+        "type": "jc-testimonial-section",
+        "settings": {
+        }
+      },
+      "jc-staff-section": {
+        "type": "jc-staff-section",
+        "blocks": {
+          "1587418871832": {
+            "type": "text",
+            "settings": {
+              "team_member_name": "Angie Marshall",
+              "team_member_title": "President",
+              "team_member_image": "shopify:\/\/shop_images\/angie-marshall-min.JPG",
+              "team_member_bio": "<p>Angie Marshall has been with Cage Marshall Consulting since 1994. She has held the positions of Senior Consultant, Director of Operations, and now, that of President and Owner of the company. Her prior experience includes conducting pilot background checks for a legacy and a regional airline, developing and establishing interview and hiring protocols for corporate businesses, training interviewers, and managing and overseeing HR departments. This previous experience and her years at Cage Marshall Consulting have resulted in proven success in pilot placement at airlines worldwide. During Angie’s tenure, she has been instrumental in Cage Marshall Consulting helping more than 100,000 pilots reach their professional pilot goals.<\/p><p><\/p><p><\/p><p>Angie’s areas of expertise include interview preparation, career and furlough guidance, background research, application support, resume and cover letter development, and special concerns consulting. She has worked with pilots and flight instructors from a variety of backgrounds from regional, legacy, cargo, international carriers, and with military pilots transitioning to civilian flying, including DoD, NASA and Air Force One pilots.<\/p><p><br\/>Angie earned her Bachelor’s Degree in Business Management with a concentration in Human Resources, from Colorado State University, and is currently pursuing her Master's in Forensic Psychology with an emphasis in Interviewing, Interrogation, and Profiling.<br\/><br\/><\/p><p><br\/><br\/><\/p><p><br\/><br\/><\/p><p><br\/><br\/><\/p>"
+            }
+          },
+          "1587420378562": {
+            "type": "text",
+            "settings": {
+              "team_member_name": "Cheryl Cage",
+              "team_member_title": "Founder and Author",
+              "team_member_image": "shopify:\/\/shop_images\/Screen_Shot_2022-07-22_at_10.57.10_AM.png",
+              "team_member_bio": "<p>Cheryl Cage began Cage Consulting, Inc. in 1988. Over 125,000 pilots have used the Interview Preparation and Career Planning products and services of Cage Consulting. <\/p><p>She worked as a flight attendant for Braniff Airways, until it’s bankruptcy in 1982, at which time Cheryl made a career transition into marketing and management for a national sports company. She left this position to start Cage Consulting, Inc.<\/p><p>Beginning in 1990, Cheryl served as an independent consultant to the Air Line Pilots Association (ALPA).  In this capacity, Cage Marshall Consulting has presented pilot interview preparation seminars to thousands of displaced ALPA pilots from PanAm, Midway, USAirways, TWA, Air Wisconsin, West Air, and Aspen Airways to name a few. In 2001, Cheryl was retained by the Allied Pilots Association and United Airlines ALPA to present job search workshops for their furloughed pilot members.<\/p><p>Cheryl is the author of five aviation career books, including the best-selling <em>Checklist for Success: A Pilot’s Guide to the Successful Airline Interview<\/em>. Cheryl is also the publisher of the popular<em> Airline Pilot Technical Interviews<\/em> and <em>Mental Math for Pilots<\/em> by Ronald McElroy.<\/p><p>When Cheryl turned the reigns of Cage Marshall over to Angie Marshall, she began a new adventure working in local politics. Cheryl has been the Democratic candidate for the Arizona State Senate, Chair of the Pima County Democratic Party and Campaign Manager for State Representative Dr. Randy Friese. She has also written a series of children’s books.<\/p><p>Cheryl’s professional education includes a Bachelor of Science in Psychology. She currently resides in Arizona. <\/p><p><br\/><br\/><\/p><p>PAST CLIENT LIST: Allied Pilots Association, Air Line Pilots Association, Embry-Riddle Aeronautical University, Universal Pilot Application Service, American Airlines, USAirways, and Women in Aviation International. Cheryl's advice columns have appeared in Flight Training, Air Line Pilot Association, Aviation for Women, and The Independent. For two years Cheryl wrote a career column for The Army, Navy, and Air Force Times; this column focused on gaining civilian employment after military retirement or separation.<\/p><p><br\/><br\/><br\/><br\/><br\/><br\/><br\/><br\/><br\/><br\/><br\/><br\/><\/p>"
+            }
+          },
+          "1587418949891": {
+            "type": "text",
+            "settings": {
+              "team_member_name": "DeeDee Onodera-Brown",
+              "team_member_title": "Vice President of Consulting Services",
+              "team_member_image": "shopify:\/\/shop_images\/deedee-onodera-brown-min.JPG",
+              "team_member_bio": "<p>DeeDee Onodera-Brown came to Cage Marshall Consulting in 2012. As Senior Consultant, DeeDee is responsible for overseeing interview preps, reviewing resumes and applications, and conducting debriefs. <\/p><p><\/p><p><br\/>Her previous experience includes more than 25 years with a legacy airline. She has served in several roles, including pilot interviewer, presenter at aviation career seminars and workshops, and emergency procedures instructor for both pilots and flight attendants. Additionally, she served as a member of an airline’s pilot interview board, and has done contract training for Air Force One. <br\/><br\/><br\/>DeeDee’s experience as an interviewer for a legacy carrier offers clients an opportunity to better understand the interview process from the perspective of an airline human resources professional.  Her unique background and knowledge provides our clients with an “interview simulator” experience that expertly prepares them for an actual interview. <\/p><p><br\/>DeeDee earned her Bachelor’s Degree from the University of Colorado-Boulder with a double major in Communication Disorders\/Speech Science and Psychology. While in college, she worked for a major airline as a special assignments flight attendant on charter flights for the Presidential Press Corps, Denver Broncos and Chicago Cubs.<\/p><p><br\/><br\/><\/p>"
+            }
+          },
+          "1587419089402": {
+            "type": "text",
+            "settings": {
+              "team_member_name": "Holly Hoover",
+              "team_member_title": "Senior Consultant & Application Specialist",
+              "team_member_image": "shopify:\/\/shop_images\/Aubrey-Hord_WEB_Holly-Hoover_001_1.jpg",
+              "team_member_bio": "<p>Holly Hoover initially consulted for Cage Marshall Consulting from 1995 to 2002, at which time she left to pursue her graduate degree in counseling. She returned in 2014 and brings to the company an extensive knowledge of the airline industry and the pilot interviewing process. While employed with a legacy carrier, she held several positions in the pilot employment department, including that of pilot interviewer.<\/p><p><br\/>She also has extensive training and experience in reviewing applications, discussing areas of concerns, and discovering an applicant’s weaknesses. These skills, combined with her education in psychology, make her an excellent interview preparation consultant.<br\/><\/p><p><br\/>Holly has a Bachelor's Degree in Psychology and a Master's Degree in Counseling Psychology, both earned at the University of Colorado at Denver.<br\/><br\/><br\/><\/p>"
+            }
+          },
+          "1587419119924": {
+            "type": "text",
+            "settings": {
+              "team_member_name": "Michael Engel",
+              "team_member_title": "Senior Interview Consultant",
+              "team_member_image": "shopify:\/\/shop_images\/michael-engel-min.jpg",
+              "team_member_bio": "<p>Michael Engel joined Cage Marshall in early 2014 after having “retired” from the airline industry.  Along with a commitment to the airline industry, Mike is excited to return to the position of Human Resource Consultant supporting flight officers preparing for advancement in their chosen careers. He brings with him over 30 years of airline experience with regional and legacy carriers.<br\/><br\/>Mike’s career has included line experience as a domestic flight attendant for a regional air carrier, and as Chief Purser\/Flight Service Manager with an international airline. Mike transitioned to ground work, utilizing his degree in education as Manager of Training, and later as an Emergency Procedures Instructor for Pilots and Flight Attendants. Additionally, he utilized his business knowledge by holding positions as manager and supervisor of flight crews. He has served on System Boards of Adjustments as a Hearing Officer and Mediator, and has extensive experience in industrial relations handling contract negotiations.<br\/><br\/>Mike’s Human Resource background includes cover letter and resume reviews, as well as detailed interview experience with pilots, flight attendants, ground personnel, and administrative personnel. He has also had the responsibility for interviewing and hiring airline managers and supervisors.<\/p><p><br\/>He possesses a Master’s Degree in Education from St. Louis University, and a Master’s Degree in Business Administration from Webster University.<\/p><p><br\/><br\/><\/p>"
+            }
+          },
+          "ac0a3192-e01e-4829-ab16-904746d07f07": {
+            "type": "text",
+            "settings": {
+              "team_member_name": "Joe Halsey",
+              "team_member_title": "HR Consultant",
+              "team_member_image": "shopify:\/\/shop_images\/Joe.jpg",
+              "team_member_bio": "<p>Joe Halsey joined our team in June 2021, having worked for a legacy airline for over 10 years, including two years as a Pilot interviewer. <\/p><p>While working alongside line Captains, he participated in over 1,000 pilot interviews and recommended several hundred for hire in this role. He was also selected as an interview coach; a role in which he observed other pilot interviewers and provided feedback to enhance their skills and ensure consistency in the interview process. Additionally, he was asked to work with other groups internally in developing a mentor training program for women and minorities in aviation.<\/p><p>Prior to working in Flight Officer Employment, he also worked in the Rocky Mountain Regional Ground Support Employment Office for eight years at the same legacy carrier. In his last role of Sr. Staff Representative, Joe led a team of recruiters responsible for filling all ground support jobs, including Customer Service, Ramp Service, Cabin Service, Reservations, Administrative Support and Management\/Supervision. This Office filled approximately 1,000 jobs each year in this 30-airport Region. He was instrumental in helping open new airport locations both internationally and domestically, including staffing up for the grand opening of Denver International Airport. <br\/><br\/>During Joe’s 30-year Human Resources career, he has also built Human Resources and Recruiting organizations in the telecommunications (Comcast), banking, and oil and gas services industries. Having been certified early in his career in Development Decisions Inc.’s (DDI) Targeted Selection, Joe has established himself as an expert in behavioral based interviewing, which many air transport companies utilize in their hiring processes. <\/p><p><\/p><p><\/p><p>Aviation has been in Joe’s blood his entire life, as his father was a line Captain and Instructor for a legacy airline for over 30 years. Joe is looking forward to utilizing his skills to assist those pursuing aviation careers reach their goals. <\/p><p><\/p><p>Joe received a Bachelor of Business Administration Degree in Management\/Management Information Systems from James Madison University. He currently resides in Louisiana with his wife, and has two adult children. <\/p><p><br\/><br\/><br\/><br\/><br\/><br\/><br\/><br\/><br\/><br\/><br\/><\/p>"
+            }
+          },
+          "bcfce461-009d-4080-81f4-0ccdcb659f25": {
+            "type": "text",
+            "settings": {
+              "team_member_name": "Scott Cooper",
+              "team_member_title": "HR & Technical Consultant",
+              "team_member_bio": "<p>Scott Cooper is a Captain and LCA for a legacy airline, and has over 32 years of experience in the aviation industry.  During the course of his career, he has flown for a number of regional, legacy, and foreign airlines, having flown a variety of aircraft from the Saab 340 to the DC-10, 777, and A340-600.  <\/p><p>His experience includes having served as a line pilot, interview captain, manager of pilot recruitment and check airman for several airlines. In addition to these duties, Scott has served as a Flight Manager, New Hire Pilot Supervisor, Air Safety Committee Vice Chairman, and CRM Facilitator. Scott is also a Hogan HPI qualified assessor. <\/p><p><\/p><p>Scott’s experience gives him a unique insight into the industry and makes him an ideal consultant for both HR prep, as well as preparing our clients for the technical portion of the interview process.<br\/><br\/>Scott holds degrees in both aviation management and culinary arts, and is fluent in six languages.<br\/><br\/><br\/><br\/><br\/><\/p>"
+            }
+          },
+          "97adde72-3ad6-44b5-a1da-f5229181f9e8": {
+            "type": "text",
+            "settings": {
+              "team_member_name": "JP Pellegrino",
+              "team_member_title": "HR & Technical Consultant",
+              "team_member_bio": "<p>JP is an airline pilot and flight instructor for a legacy airline. He has experience on both Airbus and Boeing fleets. Prior to that, he spent 20 years on active duty in the Marines where he flew and instructed in KC130 and Gulfstream IV aircraft. His experience allows him to bring a keen insight into military to civilian transitions and technical preparation, in addition to standard airline interview prep. <\/p><p>JP earned a Bachelor of Science degree in Economics from the United States Naval Academy. He is married with three kids and four dogs and lives in the Denver, Colorado area.<\/p><p><br\/><br\/><\/p><p><br\/><br\/><\/p>"
+            }
+          },
+          "d0310596-0c6f-4cbb-be44-9da03e5c3158": {
+            "type": "text",
+            "disabled": true,
+            "settings": {
+              "team_member_name": "Mark Crissman",
+              "team_member_title": "HR & Technical Consultant",
+              "team_member_bio": "<p>Mark Crissman proudly joined the Cage Marshall Consulting team in 2021.<br\/><\/p><p>Mark is a retired Captain from a legacy carrier and has over 35 years experience in the aviation industry. <br\/><\/p><p>He has worked at four different airlines and has flown aircraft in corporate, regional, national and major airlines. With flight time in the B727, B737 and B787, among others. <\/p><p>He served 23 years in the U.S. Navy and flew A-3 Skywarriors, EA-6 Intruders, and the ES-3 Shadow. He served as a NATOPS Evaluator in the ES-3 and taught Aircrew Coordination Training as an instructor. <\/p><p>Mark worked in the Navy Reserve at multiple major commands, instructing Joint Air Command and Control Doctrine. He is a graduate of the Naval Aviation Safety School Course and the Air Line Pilot Association Accident Investigation Course. He has conducted military Aircraft Mishap Boards and civilian National Transportation Safety Board investigations. <\/p><p><\/p><p>Mark’s aviation and military career experience make him a valued asset to our clients.<br\/><br\/>Mark has a Bachelor of Science degree in Political Science, with a minor in Naval Science. He is enjoying his “retirement” in Texas with his wife, and has four grown daughters living in the area.<br\/><br\/><br\/><br\/><br\/><\/p>"
+            }
+          },
+          "1587419611953": {
+            "type": "text",
+            "settings": {
+              "team_member_name": "Damian Duhon",
+              "team_member_title": "Technical Consultant",
+              "team_member_image": "shopify:\/\/shop_images\/damian-duhon-min.jpg",
+              "team_member_bio": "<p>Damian Duhon brings with him an extensive background in military experiences, spanning 20 years. During his time in the Marine Corps, Damian was stationed all around the world and performed various duties from ground radio repairman, Naval Aviator, Aerial Refueler, to Division Head, Weapons School Instructor and the Defensive Tactics, Air Delivery, and Assault Landing Zone subject matter expert for the Marine Corps, and much more. <\/p><p>Damian’s wealth of knowledge makes him a valued asset to our clients, as part of our technical prep consulting team. <\/p><p>Damian is currently a captain for an international cargo carrier. <\/p><p>He graduated with honors from the University of Mississippi with a Bachelor’s Degree in Business Management and was commissioned as a Second Lieutenant in the United States Marine Corps in May 2001. <br\/><br\/>When Captain Duhon retired from the Marine Corps in January 2012, his awards included the Meritorious Service Medal, Air Medal (11th award), Navy Commendation Medal, Navy Achievement Medal (5th Award), and the Marine Corps Good Conduct Medal (3rd Award).<\/p><p><br\/><br\/><br\/><\/p>"
+            }
+          },
+          "1587419587196": {
+            "type": "text",
+            "disabled": true,
+            "settings": {
+              "team_member_name": "Alicia Edmondson",
+              "team_member_title": "Technical Consultant",
+              "team_member_image": "shopify:\/\/shop_images\/Alicia-Edmondson-min.jpg",
+              "team_member_bio": "<p>Alicia Edmondson joined the Cage Marshall team in 2018. She is currently a Flight Officer with a legacy carrier. Before entering the airline world, Alicia was a corporate, fractional and charter pilot. Most recently, she was the Director of Aviation and Chief Pilot for a corporate flight department. Alicia has also been in charge of interviewing and hiring pilots for her previous employer. She brings a vast knowledge of different backgrounds and opportunities for pilot careers.<\/p><p><\/p><p>Currently, Alicia is one of our consultants specializing in technical preparation consulting. <\/p><p>Alicia has a Bachelor of Science Degree from Southern Illinois University in Aviation Management and an Associate’s degree in Aviation Flight.<\/p><p><br\/><br\/><\/p>"
+            }
+          },
+          "39ad4fa5-7931-4b19-bb93-899513f6c7af": {
+            "type": "text",
+            "settings": {
+              "team_member_name": "Richard Schimmel",
+              "team_member_title": "Technical Consultant",
+              "team_member_image": "shopify:\/\/shop_images\/RS_pic_2.jpg",
+              "team_member_bio": "<p>Richard Schimmel proudly joined the CMC team in early 2022. He<br\/>brings with him nearly 50 years of invaluable aviation experience.<\/p><p>Richard is a retired Captain from a legacy carrier, who’s aviation<br\/>career began in 1974. He has spent 32 years as a flight instructor, 27 years as<br\/>a commercial pilot and 3 years as a general aviation accident investigator.<br\/>During his tenure at a regional carrier he was an EMB-120 line pilot, simulator<br\/>instructor, line check airman, APD, Fleet Manager and a CRM facilitator. Later,<br\/>Richard was a line pilot and simulator instructor in the B737, B757 and B767<br\/>for a legacy carrier. He also worked with the Critical Incident Response<br\/>Program. Additionally, he is currently a professor in the Professional Pilot<br\/>Program for a local college.  <\/p><p>Richard previously worked in the field of social work, focusing on<br\/>pediatric oncology, crisis intervention, and hospice. He truly enjoys working<br\/>with people, helping them help themselves and watching them succeed. His varied experiences and knowledge make him a true asset to our Tech Prep team.<\/p><p>Richard earned his Bachelor of Arts degree from San Francisco<br\/>State University and a Masters degree from Denver University, both in Social<br\/>Work. He presently resides in Texas with his wife and their two children.<\/p>"
+            }
+          },
+          "1587420894718": {
+            "type": "text",
+            "disabled": true,
+            "settings": {
+              "team_member_name": "Rick Corbett",
+              "team_member_title": "Interview Consultant",
+              "team_member_image": "shopify:\/\/shop_images\/rick-corbett.jpg",
+              "team_member_bio": "<p>Rick is currently a captain for a major airline and performs additional duties as a pilot interviewer and recruiter. He is formally trained in Target Selection and has conducted interviews in a variety of formats from military meet and greets to formal pilot interviews. He has also conducted squadron level through wing level pilot and staff interviews when he served in the Air Force. He holds a BA in Behavior Science and a Masters in Business Administration.<\/p><p>Rick is retired Air Force after serving over 26 years. He flew multiple types of aircraft and rated as a pilot and a navigator. He also served in a variety of squadron and group positions and finished in a staff position prior to retiring. He was commissioned through ROTC and served both on active duty and the reserves. Rick is also a member of the International Coach Federation (ICF), the leading global organization for the advancement of coaching.<\/p><p>Rick has owned a variety of different businesses from online retailers to national franchises. He is recognized in the community through Rotary International and through having a scholarship in his name at the college he attended for his MBA. He is also a member of the Better Business Bureau where he has been lauded for business achievement and in ethics and professionalism.<\/p><p>He has served as Vice Chairman for a non profit mutual benefit fund. This fund provided financial relief for pilots during an unforeseen hardship. Currently, he is the Chairman for Military Affairs for his airline and National Chairman for Veterans Affairs with the Air Line Pilots Association, International. This position assists pilots still serving in the military with issues relating to scheduling issues and ensuring USERRA compliance through guidelines and policy.<\/p><p>On his off time, he enjoys being with his family and volunteering in school activities with his children. He resides in a suburb of Sacramento just an hour and a half to one of his favorite spots, Lake Tahoe. Hobbies include real estate investing, weight training, kayaking, reading up on current events, and traveling.<\/p>"
+            }
+          },
+          "1587420287152": {
+            "type": "text",
+            "settings": {
+              "team_member_name": "Chris Rothe",
+              "team_member_title": "Military Transition Specialist",
+              "team_member_image": "shopify:\/\/shop_images\/chris-rothe-min_d494b7e8-0e30-43be-9f00-11dc8d29a301.JPG",
+              "team_member_bio": "<p>Chris Rothe joined Cage Marshall Consulting in 2014, bringing military transition expertise to our team. He has more than 20 years of experience as both a military and civilian pilot, and currently flies for a legacy airline and serves in the Air Force Reserves. <br\/><\/p><p>His current experience, combined with his previous experience as an Air Force pilot, has provided him with an in-depth knowledge of the military to civilian transition, and of the unique challenges Reserve and Guard members face during the transition. Chris guides pilots in making a smooth and successful transition from active duty to civilian or Reserve\/Guard flying, Reserve\/Guard to civilian flying, and everything in between.<\/p><p><\/p><p>Chris started flying gliders when he was 14 years old, and joined the U.S. Air Force right out of college. He has flown the T-37, T-44, C-130, and TG-16, and also has flown aerial firefighting missions in the C-130 to augment the U.S. Forest Service. Chris has held the positions of Qualified Aircraft Commander and Instructor Pilot, and has participated on many hiring boards for his Air Force Reserve squadron.<\/p><p>Chris earned a Bachelor’s Degree from Metropolitan State University of Denver and a Master’s Degree in Aviation Safety from Embry Riddle Aeronautical University.<br\/><br\/><\/p><p><br\/><br\/><br\/><\/p>"
+            }
+          },
+          "1587420937489": {
+            "type": "text",
+            "disabled": true,
+            "settings": {
+              "team_member_name": "Matthew Cunningham",
+              "team_member_title": "Technical Consultant",
+              "team_member_image": "shopify:\/\/shop_images\/Matthew-Cunningham.jpg",
+              "team_member_bio": "<p>Matt joined Cage Marshall Consulting in 2018. He also serves as a First Officer at a major airline, where he is based in Denver, Colorado. Prior to joining the commercial airline industry, Matt retired from United States Air Force after 21 years of active duty service. He has extensive flight instructor\/evaluator experience and served on numerous interview panels, both during his military, and his civilian career. He has many years of international flight experience as well as a broad background in aircraft mishap investigation, and aviation safety.<\/p><p>Matt earned his Bachelor’s Degree from the United States Air Force Academy and has a Master of Science Degree from Embry Riddle Aeronautical University.<\/p>"
+            }
+          },
+          "1587420319015": {
+            "type": "text",
+            "disabled": true,
+            "settings": {
+              "team_member_name": "Edward Abraham",
+              "team_member_title": "International Pilot Advisor",
+              "team_member_image": "shopify:\/\/shop_images\/ed_abraham-min.jpg",
+              "team_member_bio": "<p>Ed has been a member of the Cage Marshall Consulting team since 2014. His diverse aviation background includes flying for both domestic and international companies. Currently, Ed is a pilot for a US legacy carrier, and has more than 8700 hours of total time and 6500 Pilot-in-Command hours. Ed has flown for several airlines based in numerous countries, and shares his experience as a successful interviewer and accomplished aviation professional.<\/p><p>In 2007, while flying for a regional carrier, Ed was invited to join the management team of a new start-up company flying B737-300s. Over the course of the next eight years, he successfully interviewed and worked for several airlines worldwide. During this time, he held various positions, including Line Check Airman, Operations Performance Manager, and Line Captain. His type ratings include a CL-65, ERJ-170\/190, B-737\/300, B757\/767 as well as several international ratings.<\/p><p>Ed has earned a Bachelor’s Degree in Aviation Science and Management from Bridgewater State University, and a Master's Degree in Business Administration from Embry-Riddle Aeronautical University.<\/p>"
+            }
+          },
+          "1587419164765": {
+            "type": "text",
+            "disabled": true,
+            "settings": {
+              "team_member_name": "Seth Miller",
+              "team_member_title": "HR Interview Consultant",
+              "team_member_image": "shopify:\/\/shop_images\/seth-miller-min.jpg",
+              "team_member_bio": "<p>Seth initially came to Cage Marshall Consulting as a pilot applicant. Although he had been a Pilot Interviewer and a Line Check Airman with his former airline, he quickly recognized that he could take nothing for granted in preparing for this interview. He spent countless hours working with CMC on his resume, application, interview skills, and doing his background checks. After a lot of time and effort, Seth successfully landed his dream job! Because of his direct approach, ability to appropriately challenge situations, his interest in seeing his fellow coworkers succeed, and his diverse aviation background, Seth was a perfect addition to the Cage Marshall Consulting team.<\/p><p>Seth has a Bachelor of Science Degree in Flight Training from Purdue University and an Associate of Science Degree from Vincennes University. He was one of two pilots selected in his senior class to fly the Beechjet 400A as First Officer. From there, Seth took a Flight Instructor position with Purdue University.<\/p><p>Within a couple of years, Seth accepted a regional carrier position and for two years flew as a First Officer on the ERJ-145 and ten years as a Captain on the ERJ-170\/175. Highlights include: Line Check Airman, PC\/Simulator Check Airman, assisted in implementing AQP training with a focus on CRM\/TEM Training, delivery of the new EMB-170 from a factory in Brazil, and conducting New Hire Pilot and Check Airman Interviews. Currently, Seth is a Flight Officer with a legacy carrier and a welcomed addition to the CMC Team.<\/p>"
+            }
+          },
+          "1587419032914": {
+            "type": "text",
+            "settings": {
+              "team_member_name": "Lenny Runingen",
+              "team_member_title": "Executive Manager",
+              "team_member_image": "shopify:\/\/shop_images\/lenny-runingen-min_0782fd7b-ed61-4d0d-bd2e-73f6b7bba812.JPG",
+              "team_member_bio": "<p><br\/>Lenny Runingen came to Cage Marshall Consulting in 2012 with more than 25 years of experience in business operations. <br\/><\/p><p>Lenny is usually the first member of our team to speak with clients, and offers them expert guidance on the services and products offered by our company.<\/p><p>Lenny’s diverse background includes experience as a client services representative, account executive, sales associate, and office manager in industries ranging from health services to insurance. He has received countless hours of specialized training in areas of customer service, insurance liability and risk assessment, and business ethics.<\/p><p><\/p><p>Lenny previously served in the United States Army, both active and inactive duty.<\/p><p><br\/><br\/><\/p><p><br\/><br\/><\/p>"
+            }
+          },
+          "334ef4eb-3e14-458b-92a7-2f2e89755a9a": {
+            "type": "text",
+            "settings": {
+              "team_member_name": "Alejandra Magnin",
+              "team_member_title": "Executive Assistant to Angie Marshall & Resume and Cover Letter Services",
+              "team_member_image": "shopify:\/\/shop_images\/Magnin_CMC.jpg",
+              "team_member_bio": "<p>Alejandra Magnin joined the Cage Marshall team in early 2021, with years of prior experience as a paralegal, senior legal analyst, Spanish translator, and office manager.<\/p><p>Her interest in aviation began two decades ago when her now-husband gave her a flight lesson in a Beechcraft Duchess over the Golden Gate and Bay Bridge. In the years since, she has experienced the ins and outs of the aviation industry. Her experience with the industry gives her a direct understanding of our clients’ feelings during their journeys through the milestones of their careers.<\/p><p>Alejandra graduated summa cum laude with a Bachelor of Science degree in Justice Studies, with an emphasis in Law and Legal Process. She currently resides in Texas with her husband (a former legacy, current cargo airline pilot), their two children, and two dogs.<\/p><p><br\/><br\/><br\/><br\/><\/p>"
+            }
+          },
+          "e58f66ef-5534-48c9-9100-074ac2ed43fe": {
+            "type": "text",
+            "settings": {
+              "team_member_name": "Amy Halsey",
+              "team_member_title": "Scheduling Manager",
+              "team_member_image": "shopify:\/\/shop_images\/Amy.jpg",
+              "team_member_bio": "<p>Amy Halsey joined the Cage Marshall Consulting team in 2021, and brought with her years of experience in customer relations. ​​Amy was excited to join the team to offer administrative support to clients and our staff.<\/p><p>She began her professional career in the airline industry with a legacy carrier, specifically in the pilot employment department. Amy was the administrative assistant to the Director of Pilot Employment, with a focus on customer care for pilot candidates.<\/p><p>Amy went onto pursue roles with a retail leader in customer service. Her most recent role was in marketing for a popular quick service restaurant. Through her various roles, she has always maintained a focus on providing excellence in customer service.<\/p><p>Amy is a graduate of Colorado State University with a Bachelor of Arts in Political Science with a Latin American Studies Certificate, and minoring in Spanish. She currently resides in Louisiana, with her husband, and not too far from their two children that attend Louisiana State University.<\/p><p><br\/><br\/><br\/><br\/><br\/><br\/><br\/><\/p>"
+            }
+          },
+          "25d40bc8-83e7-41e7-876a-c28182fb5610": {
+            "type": "text",
+            "settings": {
+              "team_member_name": "Tammy Crissman",
+              "team_member_title": "Client Care Team Member",
+              "team_member_bio": "<p>Tammy Crissman came to Cage Marshall Consulting in the Spring of 2021 with more than 20 years of customer service experience.<\/p><p>Her background includes experience as a company trainer, sales representative, customer service representative, and office manager in industries including financial, education, mental health, and non-profit organizations.<\/p><p>Tammy has been associated with the military community all her life and the aviation community for the past 35 years.  Tammy understands the pressure of aviation and strives to offer our clients compassionate and friendly service during their interview process.  <\/p><p>Tammy has a Bachelor of Arts degree in Business Administration. She, along with her husband (a retired commercial airline pilot) and four grown children, currently resides in Texas. <\/p><p><br\/><br\/><br\/><br\/><\/p><p><br\/><br\/><\/p>"
+            }
+          },
+          "8bc9ec57-66e2-40cf-bd4a-725e19b4546d": {
+            "type": "text",
+            "disabled": true,
+            "settings": {
+              "team_member_name": "Sarah Nesbitt",
+              "team_member_title": "Client Care Team Member",
+              "team_member_image": "shopify:\/\/shop_images\/Sarah.jpg",
+              "team_member_bio": "<p>Sarah Nesbitt joined the Cage Marshall Consulting team in 2021. She brings a wide range of customer service experience to our client care team. <\/p><p>Although Sarah has a diverse background, she has been involved with aviation her entire life. Her grandfather served in the U.S. Air Force as a fighter pilot, and both her father and husband are also corporate pilots. In addition to working with our team, she is currently a flight attendant for a legacy carrier and Vice President of her family's vintage warbird aerial tour business.<\/p><p>Before starting her adventure as a flight attendant, Sarah was the Director of Health and Wellness for a company in Florida and worked with a professional sports team in their athletic department.<\/p><p>Sarah earned her Bachelor of Science degree in Health Management with a concentration in Kinesiology. She also holds professional certifications through AFAA and NASM. She currently resides in New York, with her husband, two children and two dogs.<\/p><p><br\/><br\/><br\/><br\/><br\/><br\/><br\/><br\/><\/p>"
+            }
+          },
+          "837a0f90-188b-42a4-b921-42f89fdb0374": {
+            "type": "text",
+            "settings": {
+              "team_member_name": "Lisa Matthews",
+              "team_member_title": "Aviation Business Specialist",
+              "team_member_image": "shopify:\/\/shop_images\/Lis_pro_pic.jpg",
+              "team_member_bio": "<p>Lisa Matthews has been working proudly with the Cage Marshall customer management team since 2019. <\/p><p>Lisa is an Aviation Business Specialist with over 17 years experience in aviation and customer management.  In addition to owning and managing various aviation based businesses with her husband (a commercial airline pilot), Lisa has also served as VP of Marketing, Director of Sales, and Director of Business Development in several aviation businesses, and continues to consult for airline-focused companies.<\/p><p>Lisa resides in Texas with her husband and two children, and has never lost her love of GA flying.<\/p><p><br\/><br\/><br\/><br\/><br\/><br\/><\/p>"
+            }
+          },
+          "1598980231582": {
+            "type": "text",
+            "settings": {
+              "team_member_name": "Naila Jones",
+              "team_member_title": "Career Transition Coach",
+              "team_member_image": "shopify:\/\/shop_images\/Jones.jpg",
+              "team_member_bio": "<p>Naila Jones comes to Cage Marshall Consulting with a unique background in Career Transition and Management Consulting. Naila’s forte is working with candidates in transition. She not only helps clients see possibilities for their professional futures, but she then teaches them how to effectively use the job search tools and processes that companies depend on to find new employees.<\/p><p>Her areas of expertise include: career coaching, career exploration and assessment, executive recruiting, training and development, client relationship management, and presentation\/public speaking. Naila is also a Translator for French to English. <br\/><br\/>An experienced workshop facilitator, Naila has presented workshops on Career Transition and Professional Development. As a management consultant she has assessed, interviewed and delivered profiles of the top candidates to corporate clients seeking new employees (Clientele list includes:  Parker-Hannifin Corporation, Moen, Vita-Mix Corporation, Nestle USA, Inc., General Electric Company, Ernst & Young, KeyCorp, Mercy Health Partners.)<\/p><p><\/p><p>Naila has a Master of Science in Human Resources with a thesis on Executive Coaching, and a Bachelor of Arts in Psychology.<br\/><br\/><br\/><br\/><br\/><br\/><\/p>"
+            }
+          },
+          "1587420351032": {
+            "type": "text",
+            "settings": {
+              "team_member_name": "Ronald McElroy",
+              "team_member_title": "Author",
+              "team_member_image": "shopify:\/\/shop_images\/ron-mcelroy-min.jpg",
+              "team_member_bio": "<p>Ronald McElroy has been a member of the Cage Marshall Consulting family since 1997, preceded by a 38-year career in aviation, which makes him a valuable resource for our clients.<\/p><p>He started his career as a U.S. Air Force pilot, and, after several years in the military, he made the transition to civilian flying. His extensive experience and in-depth aviation knowledge help our pilot applicants with the technical portion of their airline interviews. In addition to consulting, Ron shares his knowledge and experience in two books he has written: Airline Pilot Interview-A Study Guide and Mental Math for Pilots, as well as three flashcard sets: ATP, FAR, and AIM.<\/p><p>He recently retired from an international airline where he was a B-777 Captain and Pilot Instructor. However, he decided to further expand his resume and accepted a position with the Federal Aviation Administration as a test pilot. During his aviation career, Ron has held the positions of charter pilot, flight\/ground\/simulator instructor, skydive pilot, and chase and photo pilot.<\/p><p>Ron earned a Bachelor's Degree in Engineering Mechanics from the United States Air Force Academy and a Master’s Degree in Aeronautical Science from Embry Riddle Aeronautical University.<\/p><p><br\/><br\/><br\/><br\/> <\/p><p><br\/><br\/> <br\/><br\/><\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "1587418871832",
+          "1587420378562",
+          "1587418949891",
+          "1587419089402",
+          "1587419119924",
+          "ac0a3192-e01e-4829-ab16-904746d07f07",
+          "bcfce461-009d-4080-81f4-0ccdcb659f25",
+          "97adde72-3ad6-44b5-a1da-f5229181f9e8",
+          "d0310596-0c6f-4cbb-be44-9da03e5c3158",
+          "1587419611953",
+          "1587419587196",
+          "39ad4fa5-7931-4b19-bb93-899513f6c7af",
+          "1587420894718",
+          "1587420287152",
+          "1587420937489",
+          "1587420319015",
+          "1587419164765",
+          "1587419032914",
+          "334ef4eb-3e14-458b-92a7-2f2e89755a9a",
+          "e58f66ef-5534-48c9-9100-074ac2ed43fe",
+          "25d40bc8-83e7-41e7-876a-c28182fb5610",
+          "8bc9ec57-66e2-40cf-bd4a-725e19b4546d",
+          "837a0f90-188b-42a4-b921-42f89fdb0374",
+          "1598980231582",
+          "1587420351032"
+        ],
+        "settings": {
+        }
+      },
+      "jc-events-section": {
+        "type": "jc-events-section",
+        "blocks": {
+          "b58fb3d5-068f-4853-9521-a39d9d597330": {
+            "type": "text",
+            "disabled": true,
+            "settings": {
+              "event_name": "NGPA Winter Warm-Up",
+              "event_date": "February 9-12, 2023",
+              "event_location": "Palm Springs, CA",
+              "event_url": "https:\/\/www.ngpa.org\/winter_warm_up"
+            }
+          },
+          "06099166-78c1-4369-83b4-297612b815af": {
+            "type": "text",
+            "disabled": true,
+            "settings": {
+              "event_name": "Sisters of the Skies Scholarship Gala",
+              "event_date": "February 11, 2023",
+              "event_location": "Houston, TX",
+              "event_url": "https:\/\/lnkd.in\/gSERxG9f"
+            }
+          },
+          "7123acd3-0973-4f02-9c9e-5a96327218a5": {
+            "type": "text",
+            "disabled": true,
+            "settings": {
+              "event_name": "Women in Aviation International Conference",
+              "event_date": "February 23-25, 2023",
+              "event_location": "Long Beach, CA",
+              "event_url": "https:\/\/www.wai.org\/2023-conference"
+            }
+          },
+          "510e0cc2-198b-4453-a3ca-0f7f34b5711e": {
+            "type": "text",
+            "settings": {
+              "event_name": "TPNx Conference",
+              "event_date": "April 21-22, 2023",
+              "event_location": "Orlando, FL",
+              "event_url": "https:\/\/thepilotnetwork.com\/pages\/tpnx"
+            }
+          },
+          "674d3489-1443-40a0-ba37-4cb904211e80": {
+            "type": "text",
+            "settings": {
+              "event_name": "Delta Pilot Military Recruiting Event",
+              "event_date": "May 12, 2023",
+              "event_location": "Washington, D.C.",
+              "event_url": "https:\/\/platform.eventboost.com\/e\/delta-pilot-military-recruiting-event-washington-d-c-\/34760?fbclid=IwAR35IdmgV8RXmQHAk6k-pBnXhU4eDlAArkU9xPs9FOq82KmE20vFXmW7FUw"
+            }
+          },
+          "48722c52-a381-48ea-bb25-7f94b0783a27": {
+            "type": "text",
+            "settings": {
+              "event_name": "PAPA Aerospace Expo",
+              "event_date": "May 18-19, 2023",
+              "event_location": "Las Vegas, NV",
+              "event_url": "https:\/\/www.asianpilots.org\/about"
+            }
+          },
+          "bbb9b7fb-5c31-460a-b187-f62f96e4f9e5": {
+            "type": "text",
+            "settings": {
+              "event_name": "NGPA Wings Over Florida",
+              "event_date": "June 16-18, 2023",
+              "event_location": "Ft. Lauderdale, FL",
+              "event_url": "https:\/\/www.ngpa.org\/wings_over_florida"
+            }
+          },
+          "f45556cb-b251-4d97-8471-5a75f20beba8": {
+            "type": "text",
+            "settings": {
+              "event_name": "EAA AirVenture",
+              "event_date": "July 24-30, 2023",
+              "event_location": "Oshkosh, WI",
+              "event_url": "https:\/\/www.visitoshkosh.com\/events\/eaa-airventure\/"
+            }
+          },
+          "22daa637-005f-484f-ab5a-f329b99f1a11": {
+            "type": "text",
+            "settings": {
+              "event_name": "OBAP 47th Annual Conference",
+              "event_date": "August 09-11, 2023",
+              "event_location": "New Orleans, LA",
+              "event_url": "https:\/\/obap.org\/annual-conference\/"
+            }
+          },
+          "00418b7b-2b73-4405-b5fa-168e693bf94c": {
+            "type": "text",
+            "settings": {
+              "event_name": "LPA Latin Aerospace Industry Expo",
+              "event_date": "September 14-16, 2023",
+              "event_location": "Kissimmee, FL",
+              "event_url": "https:\/\/www.latinopilot.org\/latinexpo2023"
+            }
+          },
+          "2eccd13f-f324-4816-8405-9e5fbc2acbbb": {
+            "type": "text",
+            "settings": {
+              "event_name": "UAA 76th Annual Collegiate Aviation Conference & Expo",
+              "event_date": "September 27-29, 2023",
+              "event_location": "St. Petersburg, FL",
+              "event_url": "https:\/\/www.uaa.aero\/2023_annual_collegiate_aviatio.php"
+            }
+          },
+          "b44c95e0-6ae7-426c-a151-9b6bf29bcad1": {
+            "type": "text",
+            "settings": {
+              "event_name": "RTAG Convention",
+              "event_date": "October 07-08, 2023",
+              "event_location": "Fort Worth,TX",
+              "event_url": "https:\/\/www.rtag.org\/"
+            }
+          }
+        },
+        "block_order": [
+          "b58fb3d5-068f-4853-9521-a39d9d597330",
+          "06099166-78c1-4369-83b4-297612b815af",
+          "7123acd3-0973-4f02-9c9e-5a96327218a5",
+          "510e0cc2-198b-4453-a3ca-0f7f34b5711e",
+          "674d3489-1443-40a0-ba37-4cb904211e80",
+          "48722c52-a381-48ea-bb25-7f94b0783a27",
+          "bbb9b7fb-5c31-460a-b187-f62f96e4f9e5",
+          "f45556cb-b251-4d97-8471-5a75f20beba8",
+          "22daa637-005f-484f-ab5a-f329b99f1a11",
+          "00418b7b-2b73-4405-b5fa-168e693bf94c",
+          "2eccd13f-f324-4816-8405-9e5fbc2acbbb",
+          "b44c95e0-6ae7-426c-a151-9b6bf29bcad1"
+        ],
+        "settings": {
+        }
+      },
+      "jc-newsletter-cta": {
+        "type": "jc-newsletter-cta",
+        "settings": {
+        }
+      },
+      "jc-resources-airlines": {
+        "type": "jc-resources-airlines",
+        "blocks": {
+          "1589220451726": {
+            "type": "text",
+            "settings": {
+              "resource_name": "Air Wisconsin Airlines",
+              "resource_url": "http:\/\/www.airwis.com\/pilots.html",
+              "resource_img": "shopify:\/\/shop_images\/air-wisconsin-min.jpg",
+              "resource_img_size": ""
+            }
+          },
+          "1589220477813": {
+            "type": "text",
+            "settings": {
+              "resource_name": "Alaska Airlines",
+              "resource_url": "https:\/\/alaskaair.jobs\/career-opportunities\/pilots\/alaska-airlines\/",
+              "resource_img": "shopify:\/\/shop_images\/alaskaairlines-min.png",
+              "resource_img_size": ""
+            }
+          },
+          "1589220490512": {
+            "type": "text",
+            "settings": {
+              "resource_name": "Allegiant Air",
+              "resource_url": "https:\/\/www.allegiantair.com\/careers\/pilots",
+              "resource_img": "shopify:\/\/shop_images\/allegiant-air-min.png",
+              "resource_img_size": ""
+            }
+          },
+          "1589221861701": {
+            "type": "text",
+            "settings": {
+              "resource_name": "American Airlines",
+              "resource_url": "https:\/\/jobs.aa.com\/?utm_source=careersite",
+              "resource_img": "shopify:\/\/shop_images\/american-airlines-min.png",
+              "resource_img_size": ""
+            }
+          },
+          "1589221881581": {
+            "type": "text",
+            "settings": {
+              "resource_name": "Atlas Air",
+              "resource_url": "https:\/\/careers.atlasairworldwide.com",
+              "resource_img": "shopify:\/\/shop_images\/atlas-air-min.png",
+              "resource_img_size": ""
+            }
+          },
+          "1589221909277": {
+            "type": "text",
+            "settings": {
+              "resource_name": "Breeze Airways",
+              "resource_url": "https:\/\/www.flybreeze.com\/",
+              "resource_img": "shopify:\/\/shop_images\/breeze-min.jpg",
+              "resource_img_size": ""
+            }
+          },
+          "1589221922705": {
+            "type": "text",
+            "settings": {
+              "resource_name": "CommutAir",
+              "resource_url": "https:\/\/www.flycommutair.com\/careers\/",
+              "resource_img": "shopify:\/\/shop_images\/commutair-min.png",
+              "resource_img_size": ""
+            }
+          },
+          "1589221937388": {
+            "type": "text",
+            "settings": {
+              "resource_name": "Delta Air Lines",
+              "resource_url": "https:\/\/www.delta.com\/us\/en\/careers\/overview",
+              "resource_img": "shopify:\/\/shop_images\/delta-min.jpg",
+              "resource_img_size": ""
+            }
+          },
+          "1589222258158": {
+            "type": "text",
+            "settings": {
+              "resource_name": "Endeavor Air",
+              "resource_url": "http:\/\/www.endeavorair.com\/content\/endeavor-air\/en_us\/careers\/pilots.html",
+              "resource_img": "shopify:\/\/shop_images\/endeavor-air-min.jpg",
+              "resource_img_size": ""
+            }
+          },
+          "1589222268968": {
+            "type": "text",
+            "settings": {
+              "resource_name": "Envoy Air",
+              "resource_url": "https:\/\/www.envoyair.com\/pilots\/",
+              "resource_img": "shopify:\/\/shop_images\/envoy-logo-min.jpg",
+              "resource_img_size": ""
+            }
+          },
+          "1589222282078": {
+            "type": "text",
+            "disabled": true,
+            "settings": {
+              "resource_name": "ExpressJet Airlines",
+              "resource_url": "http:\/\/www.expressjet.com\/careers\/pilots\/",
+              "resource_img_size": ""
+            }
+          },
+          "1589222299248": {
+            "type": "text",
+            "settings": {
+              "resource_name": "FedEx Express",
+              "resource_url": "https:\/\/careers.fedex.com\/pilot",
+              "resource_img": "shopify:\/\/shop_images\/fedex-min.jpg",
+              "resource_img_size": ""
+            }
+          },
+          "1589222310609": {
+            "type": "text",
+            "settings": {
+              "resource_name": "Frontier Airlines",
+              "resource_url": "https:\/\/www.flyfrontier.com\/careers\/pilot?mobile=true",
+              "resource_img": "shopify:\/\/shop_images\/frontier-logo-min.jpg",
+              "resource_img_size": ""
+            }
+          },
+          "1589222326234": {
+            "type": "text",
+            "settings": {
+              "resource_name": "GoJet Airlines",
+              "resource_url": "http:\/\/www.gojetairlines.com\/careers\/pilots\/Pages\/Pilot-Careers.aspx",
+              "resource_img": "shopify:\/\/shop_images\/gojet-min.png",
+              "resource_img_size": ""
+            }
+          },
+          "1589222332418": {
+            "type": "text",
+            "settings": {
+              "resource_name": "Hawaiian Airlines",
+              "resource_url": "https:\/\/www.hawaiianairlines.com\/careers\/first-officer",
+              "resource_img": "shopify:\/\/shop_images\/hawaiian-airlines-min.png",
+              "resource_img_size": ""
+            }
+          },
+          "1589222344385": {
+            "type": "text",
+            "settings": {
+              "resource_name": "Horizon Air",
+              "resource_url": "https:\/\/alaskaair.jobs\/career-opportunities\/pilots\/horizon-air\/",
+              "resource_img": "shopify:\/\/shop_images\/horizon-air-min.png",
+              "resource_img_size": ""
+            }
+          },
+          "1589222361239": {
+            "type": "text",
+            "settings": {
+              "resource_name": "jetBlue Airways",
+              "resource_url": "https:\/\/careers.jetblue.com\/go\/First-Officer\/8044500\/",
+              "resource_img": "shopify:\/\/shop_images\/jetblue-logo-min.png",
+              "resource_img_size": ""
+            }
+          },
+          "1589222373962": {
+            "type": "text",
+            "settings": {
+              "resource_name": "Kalitta Air",
+              "resource_url": "https:\/\/workforcenow.adp.com\/mascsr\/default\/mdf\/recruitment\/recruitment.html?cid=1dc6e17f-23c6-4f48-9d2a-417f80fdbbf1&ccId=19000101_000001&type=MP&lang=en_US",
+              "resource_img": "shopify:\/\/shop_images\/kalitta-charters-min.png",
+              "resource_img_size": ""
+            }
+          },
+          "1589222504826": {
+            "type": "text",
+            "settings": {
+              "resource_name": "Mesa Airlines",
+              "resource_url": "http:\/\/www.mesa-air.com\/pilots",
+              "resource_img": "shopify:\/\/shop_images\/mesa-logo-min.png",
+              "resource_img_size": ""
+            }
+          },
+          "1589222513029": {
+            "type": "text",
+            "settings": {
+              "resource_name": "Piedmont Airlines",
+              "resource_url": "https:\/\/piedmont-airlines.com\/",
+              "resource_img": "shopify:\/\/shop_images\/piedmont-min.jpg",
+              "resource_img_size": ""
+            }
+          },
+          "1589222531993": {
+            "type": "text",
+            "settings": {
+              "resource_name": "PSA Airlines",
+              "resource_url": "https:\/\/www.psaairlines.com\/",
+              "resource_img": "shopify:\/\/shop_images\/psa-airlines-min.png",
+              "resource_img_size": ""
+            }
+          },
+          "1589222543895": {
+            "type": "text",
+            "settings": {
+              "resource_name": "Republic Airways",
+              "resource_url": "https:\/\/careers.rjet.com\/Airline-Careers\/Pilot",
+              "resource_img": "shopify:\/\/shop_images\/republic-airways-min.png",
+              "resource_img_size": ""
+            }
+          },
+          "d6d9b85c-bed8-4b3f-93e8-896a66b3b3a8": {
+            "type": "text",
+            "settings": {
+              "resource_name": "SkyWest Airlines",
+              "resource_url": "https:\/\/www.skywest.com\/",
+              "resource_img": "shopify:\/\/shop_images\/skywest.png",
+              "resource_img_size": ""
+            }
+          },
+          "1589222551567": {
+            "type": "text",
+            "settings": {
+              "resource_name": "Southwest Airlines",
+              "resource_url": "https:\/\/careers.southwestair.com\/pilots",
+              "resource_img": "shopify:\/\/shop_images\/southwest-logo-min.png",
+              "resource_img_size": ""
+            }
+          },
+          "1589222604910": {
+            "type": "text",
+            "settings": {
+              "resource_name": "Spirit Airlines",
+              "resource_url": "https:\/\/pilotcareers-spirit.icims.com\/jobs\/intro?hashed=-435591526&mobile=false&width=1140&height=500&bga=true&needsRedirect=false&jan1offset=-300&jun1offset=-240",
+              "resource_img": "shopify:\/\/shop_images\/spirit-airlines-min.jpg",
+              "resource_img_size": ""
+            }
+          },
+          "1589222615462": {
+            "type": "text",
+            "settings": {
+              "resource_name": "Sun Country Airlines",
+              "resource_url": "https:\/\/www.suncountry.com\/pilots",
+              "resource_img": "shopify:\/\/shop_images\/sun-country-min.png",
+              "resource_img_size": ""
+            }
+          },
+          "1589222627923": {
+            "type": "text",
+            "settings": {
+              "resource_name": "United Airlines",
+              "resource_url": "https:\/\/www.united.com\/en\/us\/fly\/company\/career.html",
+              "resource_img": "shopify:\/\/shop_images\/united-logo-min.png",
+              "resource_img_size": ""
+            }
+          },
+          "1589222642546": {
+            "type": "text",
+            "settings": {
+              "resource_name": "UPS",
+              "resource_url": "https:\/\/www.jobs-ups.com\/job\/louisville\/first-officer\/1187\/14712414",
+              "resource_img": "shopify:\/\/shop_images\/ups-min.png",
+              "resource_img_size": "small"
+            }
+          }
+        },
+        "block_order": [
+          "1589220451726",
+          "1589220477813",
+          "1589220490512",
+          "1589221861701",
+          "1589221881581",
+          "1589221909277",
+          "1589221922705",
+          "1589221937388",
+          "1589222258158",
+          "1589222268968",
+          "1589222282078",
+          "1589222299248",
+          "1589222310609",
+          "1589222326234",
+          "1589222332418",
+          "1589222344385",
+          "1589222361239",
+          "1589222373962",
+          "1589222504826",
+          "1589222513029",
+          "1589222531993",
+          "1589222543895",
+          "d6d9b85c-bed8-4b3f-93e8-896a66b3b3a8",
+          "1589222551567",
+          "1589222604910",
+          "1589222615462",
+          "1589222627923",
+          "1589222642546"
+        ],
+        "settings": {
+          "heading_text": "Airlines (passenger and cargo)",
+          "sub_heading_text": ""
+        }
+      },
+      "jc-resources-applications": {
+        "type": "jc-resources-applications",
+        "blocks": {
+          "1589222802485": {
+            "type": "text",
+            "settings": {
+              "resource_name": "Airlineapps.com",
+              "resource_url": "https:\/\/www.airlineapps.com\/",
+              "resource_img": "shopify:\/\/shop_images\/airline-apps-min.png"
+            }
+          },
+          "1589222858385": {
+            "type": "text",
+            "settings": {
+              "resource_name": "Pilotcredentials.com",
+              "resource_url": "https:\/\/pilotcredentials.com\/",
+              "resource_img": "shopify:\/\/shop_images\/pilotcredentials-min.png"
+            }
+          }
+        },
+        "block_order": [
+          "1589222802485",
+          "1589222858385"
+        ],
+        "settings": {
+          "heading_text": "ONLINE APPLICATION SERVICES",
+          "sub_heading_text": ""
+        }
+      },
+      "jc-resources-corporate-charter": {
+        "type": "jc-resources-corporate-charter",
+        "blocks": {
+          "1589223221282": {
+            "type": "text",
+            "settings": {
+              "resource_name": "Delta Private Jets",
+              "resource_url": "https:\/\/www.deltaprivatejets.com\/pilots\/",
+              "resource_img": "shopify:\/\/shop_images\/delta-private-jets-min.jpg"
+            }
+          },
+          "1589223244337": {
+            "type": "text",
+            "settings": {
+              "resource_name": "Flexjet",
+              "resource_url": "https:\/\/www.flexjet.com\/careers\/",
+              "resource_img": "shopify:\/\/shop_images\/flexjet-min.jpg"
+            }
+          },
+          "1589223257280": {
+            "type": "text",
+            "settings": {
+              "resource_name": "NetJets",
+              "resource_url": "https:\/\/www.netjets.com\/en-us\/careers",
+              "resource_img": "shopify:\/\/shop_images\/netjets-min.png"
+            }
+          },
+          "1589223268695": {
+            "type": "text",
+            "settings": {
+              "resource_name": "L3 Harris",
+              "resource_url": "https:\/\/www.l3commercialaviation.com\/careers\/",
+              "resource_img": "shopify:\/\/shop_images\/l3harris-min.png"
+            }
+          },
+          "1589223281126": {
+            "type": "text",
+            "settings": {
+              "resource_name": "Wheels Up",
+              "resource_url": "https:\/\/careers-wheelsup.icims.com\/jobs\/search?mobile=false&width=1024&height=500&bga=true&needsRedirect=false&jan1offset=-420&jun1offset=-360",
+              "resource_img": "shopify:\/\/shop_images\/wheels-up-min.png"
+            }
+          },
+          "1589819507111": {
+            "type": "text",
+            "settings": {
+              "resource_name": "Executive Jet Management",
+              "resource_url": "https:\/\/careers.netjets.com\/ejm\/",
+              "resource_img": "shopify:\/\/shop_images\/executive-jet-management-inc-ejm-logo-vector-min.png"
+            }
+          },
+          "1589819523778": {
+            "type": "text",
+            "settings": {
+              "resource_name": "Elevate Jet",
+              "resource_url": "https:\/\/elevatejet.com\/company\/careers\/",
+              "resource_img": "shopify:\/\/shop_images\/elevate-jet-min.jpg"
+            }
+          },
+          "1589819540831": {
+            "type": "text",
+            "settings": {
+              "resource_name": "Boutique Air",
+              "resource_url": "https:\/\/www.boutiqueair.com\/pages\/jobs",
+              "resource_img": "shopify:\/\/shop_images\/boutique-air-min.png"
+            }
+          }
+        },
+        "block_order": [
+          "1589223221282",
+          "1589223244337",
+          "1589223257280",
+          "1589223268695",
+          "1589223281126",
+          "1589819507111",
+          "1589819523778",
+          "1589819540831"
+        ],
+        "settings": {
+          "heading_text": "Corporate \/ Charter (Part 135 \/ 91 \/ 91K)",
+          "sub_heading_text": ""
+        }
+      },
+      "jc-resources-corporate-resources": {
+        "type": "jc-resources-corporate-resources",
+        "blocks": {
+          "1589223625568": {
+            "type": "text",
+            "settings": {
+              "resource_name": "bizjetjobs.com",
+              "resource_url": "https:\/\/BizJetJobs.com",
+              "resource_type": "Corporate Pilot Jobs",
+              "resource_img": "shopify:\/\/shop_images\/biz-jet-min.jpg"
+            }
+          },
+          "1589223669182": {
+            "type": "text",
+            "settings": {
+              "resource_name": "willflyforfood.com",
+              "resource_url": "http:\/\/www.willflyforfood.com\/pilot-jobs\/",
+              "resource_type": "Pilot job board",
+              "resource_img": "shopify:\/\/shop_images\/will-fly-for-food-min.png"
+            }
+          },
+          "1589223731648": {
+            "type": "text",
+            "settings": {
+              "resource_name": "climbto350.com",
+              "resource_url": "https:\/\/www.climbto350.com",
+              "resource_type": "Aviation job postings and can upload your resume",
+              "resource_img": "shopify:\/\/shop_images\/climbto350-min.png"
+            }
+          },
+          "1589223718759": {
+            "type": "text",
+            "settings": {
+              "resource_name": "indeed.com",
+              "resource_url": "https:\/\/www.indeed.com\/q-aviation-jobs.html",
+              "resource_type": "Aviation Jobs",
+              "resource_img": "shopify:\/\/shop_images\/Indeed-logo-min.png"
+            }
+          },
+          "1589223899060": {
+            "type": "text",
+            "settings": {
+              "resource_name": "jsfirm.com",
+              "resource_url": "https:\/\/jsfirm.com\/pilot+jobs",
+              "resource_type": "Aviation Jobs",
+              "resource_img": "shopify:\/\/shop_images\/jsfirm-min.png"
+            }
+          },
+          "1589223928145": {
+            "type": "text",
+            "settings": {
+              "resource_name": "monster.com",
+              "resource_url": "https:\/\/www.monster.com\/jobs\/q-aviation-jobs",
+              "resource_type": "Aviation Jobs",
+              "resource_img": "shopify:\/\/shop_images\/monster-min.png"
+            }
+          },
+          "1589223949836": {
+            "type": "text",
+            "settings": {
+              "resource_name": "aviation.everyjobforme.com",
+              "resource_url": "https:\/\/aviation.everyjobforme.com\/aviation\/apply",
+              "resource_type": "Aviation Jobs",
+              "resource_img": "shopify:\/\/shop_images\/everyjobforme-min.png"
+            }
+          },
+          "1589223971656": {
+            "type": "text",
+            "settings": {
+              "resource_name": "joblist.com",
+              "resource_url": "https:\/\/www.joblist.com",
+              "resource_type": "Aviation Jobs",
+              "resource_img": "shopify:\/\/shop_images\/joblist-min.png"
+            }
+          },
+          "1589223992795": {
+            "type": "text",
+            "settings": {
+              "resource_name": "jobs2careers.com",
+              "resource_url": "https:\/\/jobs2careers.com",
+              "resource_type": "Aviation Jobs",
+              "resource_img": "shopify:\/\/shop_images\/jobs-to-careers-min.jpg"
+            }
+          },
+          "1589224014544": {
+            "type": "text",
+            "settings": {
+              "resource_name": "aerotek.com",
+              "resource_url": "https:\/\/www.aerotek.com\/jobs",
+              "resource_type": "Job postings",
+              "resource_img": "shopify:\/\/shop_images\/aerotek-logo-min.jpg"
+            }
+          },
+          "1589224047827": {
+            "type": "text",
+            "settings": {
+              "resource_name": "aopa.org",
+              "resource_url": "https:\/\/www.aopa.org\/about\/hr\/aviation-job-postings",
+              "resource_type": "AOPA Job Board",
+              "resource_img": "shopify:\/\/shop_images\/aopa-logo-min.png"
+            }
+          },
+          "1589224063678": {
+            "type": "text",
+            "settings": {
+              "resource_name": "avianation.com",
+              "resource_url": "https:\/\/www.avianation.com",
+              "resource_type": "Aviation Jobs",
+              "resource_img": "shopify:\/\/shop_images\/avia-nation-min.jpg"
+            }
+          },
+          "1589224137643": {
+            "type": "text",
+            "settings": {
+              "resource_name": "aviationjobsearch.com",
+              "resource_url": "https:\/\/www.aviationjobsearch.com\/pilot",
+              "resource_type": "Aviation Jobs",
+              "resource_img": "shopify:\/\/shop_images\/aviation-job-search-min.png"
+            }
+          },
+          "1589224154964": {
+            "type": "text",
+            "settings": {
+              "resource_name": "jobs.nbaa.org",
+              "resource_url": "https:\/\/jobs.nbaa.org",
+              "resource_type": "Aviation Jobs (National Business Aviation Association)",
+              "resource_img": "shopify:\/\/shop_images\/nbaa-logo-min.png"
+            }
+          },
+          "1589224180420": {
+            "type": "text",
+            "settings": {
+              "resource_name": "pilotjobs.io",
+              "resource_url": "https:\/\/www.pilotjobs.io",
+              "resource_type": "Pilot job postings",
+              "resource_img": "shopify:\/\/shop_images\/pilot-jobs-logo-min.png"
+            }
+          },
+          "1589224203187": {
+            "type": "text",
+            "settings": {
+              "resource_name": "findapilot.com",
+              "resource_url": "https:\/\/www.findapilot.com\/jobs",
+              "resource_type": "Pilot job board",
+              "resource_img": "shopify:\/\/shop_images\/findapilot-min.png"
+            }
+          },
+          "1589224220774": {
+            "type": "text",
+            "settings": {
+              "resource_name": "flyairshare.com",
+              "resource_url": "https:\/\/www.flyairshare.com",
+              "resource_type": "Pilot job postings",
+              "resource_img": "shopify:\/\/shop_images\/airshare-min.png"
+            }
+          },
+          "1589224241857": {
+            "type": "text",
+            "settings": {
+              "resource_name": "glassdoor.com",
+              "resource_url": "https:\/\/www.glassdoor.com",
+              "resource_type": "Corporate pilot jobs",
+              "resource_img": "shopify:\/\/shop_images\/glassdoor-min.png"
+            }
+          },
+          "1589224254774": {
+            "type": "text",
+            "settings": {
+              "resource_name": "simplyhired.com",
+              "resource_url": "https:\/\/www.simplyhired.com\/search?q=corporate+pilot",
+              "resource_type": "Corporate pilot jobs",
+              "resource_img": "shopify:\/\/shop_images\/simplyhired-min.png"
+            }
+          },
+          "1589224275470": {
+            "type": "text",
+            "settings": {
+              "resource_name": "pilotjobs.io",
+              "resource_url": "https:\/\/www.pilotjobs.io\/corporate-pilot-jobs.html",
+              "resource_type": "Corporate pilot jobs",
+              "resource_img": "shopify:\/\/shop_images\/pilot-jobs-logo-min.png"
+            }
+          },
+          "1589224302197": {
+            "type": "text",
+            "settings": {
+              "resource_name": "dynamicaviation.com",
+              "resource_url": "http:\/\/www.dynamicaviation.com\/careers",
+              "resource_type": "ISR job postings",
+              "resource_img": "shopify:\/\/shop_images\/dynamic-aviation-logo-min.png"
+            }
+          },
+          "1589224317952": {
+            "type": "text",
+            "settings": {
+              "resource_name": "l3t.com",
+              "resource_url": "https:\/\/www.l3t.com",
+              "resource_type": "ISR",
+              "resource_img": "shopify:\/\/shop_images\/l3harris-min.png"
+            }
+          },
+          "2ff0f1e6-7d0a-4e21-9f58-e3379dd39789": {
+            "type": "text",
+            "disabled": true,
+            "settings": {
+              "resource_name": "Financial Services",
+              "resource_url": "https:\/\/raa.com\/",
+              "resource_type": "RAA Financial Guidance for the Aviation Industry",
+              "resource_img": "shopify:\/\/shop_images\/raa-min.png"
+            }
+          }
+        },
+        "block_order": [
+          "1589223625568",
+          "1589223669182",
+          "1589223731648",
+          "1589223718759",
+          "1589223899060",
+          "1589223928145",
+          "1589223949836",
+          "1589223971656",
+          "1589223992795",
+          "1589224014544",
+          "1589224047827",
+          "1589224063678",
+          "1589224137643",
+          "1589224154964",
+          "1589224180420",
+          "1589224203187",
+          "1589224220774",
+          "1589224241857",
+          "1589224254774",
+          "1589224275470",
+          "1589224302197",
+          "1589224317952",
+          "2ff0f1e6-7d0a-4e21-9f58-e3379dd39789"
+        ],
+        "settings": {
+          "heading_text": "Pilot Job Boards",
+          "sub_heading_text": ""
+        }
+      },
+      "jc-resources-government-jobs": {
+        "type": "jc-resources-government-jobs",
+        "blocks": {
+          "1589224610900": {
+            "type": "text",
+            "settings": {
+              "resource_name": "FAA Jobs",
+              "resource_url": "https:\/\/www.faa.gov\/jobs",
+              "resource_img": "shopify:\/\/shop_images\/faa-min.png"
+            }
+          },
+          "1590160006579": {
+            "type": "text",
+            "settings": {
+              "resource_name": "AAR",
+              "resource_url": "https:\/\/www.aarcorp.com\/careers\/",
+              "resource_img": "shopify:\/\/shop_images\/aar-logo-min.png"
+            }
+          },
+          "1589224618318": {
+            "type": "text",
+            "settings": {
+              "resource_name": "Government Aviation Jobs",
+              "resource_url": "https:\/\/www.airlinejobfinder.com\/governmentjobs",
+              "resource_img": "shopify:\/\/shop_images\/airline-jobs-finder-min.png"
+            }
+          },
+          "1597753474286": {
+            "type": "text",
+            "settings": {
+              "resource_name": "Security Clearance Jobs",
+              "resource_url": "https:\/\/www.clearancejobs.com\/registration?gclid=CjwKCAjw1ej5BRBhEiwAfHyh1LsI5Lf7qyBaT9j96ZucBEUxCMxQfaiF-kIf6qRcyMvlgP8ZH4c9vBoCEx8QAvD_BwE&gclsrc=aw.ds",
+              "resource_img": "shopify:\/\/shop_images\/clearance-jobs-min.png"
+            }
+          },
+          "1589224633058": {
+            "type": "text",
+            "settings": {
+              "resource_name": "Homeland Security \/ Border Patrol jobs",
+              "resource_url": "https:\/\/www.dhs.gov\/homeland-security-careers",
+              "resource_img": "shopify:\/\/shop_images\/homeland-security-min.png"
+            }
+          },
+          "1589224640427": {
+            "type": "text",
+            "settings": {
+              "resource_name": "Intelligence, Surveillance and Reconnaissance (ISR pilot jobs)",
+              "resource_url": "https:\/\/magaero.com\/isr-pilot-jobs",
+              "resource_img": "shopify:\/\/shop_images\/mag-aerospace-min.png"
+            }
+          }
+        },
+        "block_order": [
+          "1589224610900",
+          "1590160006579",
+          "1589224618318",
+          "1597753474286",
+          "1589224633058",
+          "1589224640427"
+        ],
+        "settings": {
+          "heading_text": "Government Jobs",
+          "sub_heading_text": ""
+        }
+      },
+      "jc-resources-paperwork": {
+        "type": "jc-resources-paperwork",
+        "blocks": {
+          "1589225062674": {
+            "type": "text",
+            "disabled": true,
+            "settings": {
+              "resource_text": "Request copies of all college transcripts (any schools in which you were enrolled or attended class).",
+              "resource_details": ""
+            }
+          },
+          "1589225115572": {
+            "type": "text",
+            "settings": {
+              "resource_text": "Employment and Residential History from:",
+              "resource_details": "<p><a href=\"https:\/\/www.ssa.gov\" title=\"https:\/\/www.ssa.gov\">US Social Security Administration<\/a><\/p><p><a href=\"https:\/\/www.irs.gov\" title=\"https:\/\/www.irs.gov\">Internal Revenue Service<\/a><\/p>"
+            }
+          },
+          "1589225476656": {
+            "type": "text",
+            "settings": {
+              "resource_text": "FAA Files",
+              "resource_details": "<p><a href=\"http:\/\/www.faa.gov\/documentLibrary\/media\/Form\/AC8060-68.pdf\" target=\"_blank\" title=\"http:\/\/www.faa.gov\/documentLibrary\/media\/Form\/AC8060-68.pdf\">FAA Complete Airman File<\/a><\/p><p><a href=\"https:\/\/www.faa.gov\/regulations_policies\/pilot_records_database\" target=\"_blank\" title=\"https:\/\/www.faa.gov\/regulations_policies\/pilot_records_database\">Pilot Resource Database (PRD)<\/a><\/p>"
+            }
+          },
+          "1589225514682": {
+            "type": "text",
+            "settings": {
+              "resource_text": "Contact info related to driving:",
+              "resource_details": "<p><a href=\"http:\/\/one.nhtsa.gov\/staticfiles\/ncsa\/pdf\/StateDMV.pdf\" title=\"http:\/\/one.nhtsa.gov\/staticfiles\/ncsa\/pdf\/StateDMV.pdf\">State DMV<\/a><\/p><p><a href=\"http:\/\/one.nhtsa.gov\/Data\/National-Driver-Register-(NDR)\" title=\"http:\/\/one.nhtsa.gov\/Data\/National-Driver-Register-(NDR)\">Info about National Driver Register (NDR) 1-888-327-4236<\/a><\/p>"
+            }
+          },
+          "1589225572109": {
+            "type": "text",
+            "settings": {
+              "resource_text": "Military Records",
+              "resource_details": "<p><a href=\"https:\/\/www.va.gov\/records\/get-military-service-records\/\" title=\"https:\/\/www.va.gov\/records\/get-military-service-records\/\">U.S. Department of Veteran Affairs<\/a><\/p>"
+            }
+          },
+          "919a2764-b8e2-4192-a3a7-f1e1cbd8f4d7": {
+            "type": "text",
+            "settings": {
+              "resource_text": "Educational Transcripts",
+              "resource_details": "<p>Request copies of all college transcripts (any schools in which you were enrolled or attended class).<\/p><p><a href=\"https:\/\/www.parchment.com\/\" title=\"https:\/\/www.parchment.com\/\">Parchment <\/a><\/p><p><a href=\"https:\/\/nschelpcenter.force.com\/student\/s\/\" title=\"https:\/\/nschelpcenter.force.com\/student\/s\/\">National Student Clearinghouse<\/a><\/p>"
+            }
+          },
+          "de611882-48d8-46a4-a11f-011171ee6aae": {
+            "type": "text",
+            "settings": {
+              "resource_text": "Background Check",
+              "resource_details": "<p><a href=\"https:\/\/consumer.risk.lexisnexis.com\/consumer\" target=\"_blank\" title=\"Background Check\"><strong>LexisNexis<\/strong><\/a><\/p><p><a href=\"https:\/\/www.foia.gov\/\" title=\"https:\/\/www.foia.gov\/\"><strong>Freedom of Information Act (FOIA)<\/strong><\/a><\/p><p><a href=\"https:\/\/www.ntsb.gov\/Pages\/home.aspx\" title=\"https:\/\/www.ntsb.gov\/Pages\/home.aspx\"><strong>National Transportation Safety Board ( NTSB)<\/strong><\/a><\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "1589225062674",
+          "1589225115572",
+          "1589225476656",
+          "1589225514682",
+          "1589225572109",
+          "919a2764-b8e2-4192-a3a7-f1e1cbd8f4d7",
+          "de611882-48d8-46a4-a11f-011171ee6aae"
+        ],
+        "settings": {
+          "heading_text": "Gathering Paperwork",
+          "sub_heading_text": ""
+        }
+      },
+      "jc-resources-faa-medical": {
+        "type": "jc-resources-faa-medical",
+        "blocks": {
+          "1589225795272": {
+            "type": "text",
+            "settings": {
+              "resource_name": "Aviation Medical Examiner",
+              "resource_url": "https:\/\/www.faa.gov\/pilots\/amelocator"
+            }
+          }
+        },
+        "block_order": [
+          "1589225795272"
+        ],
+        "settings": {
+          "heading_text": "FAA Medical",
+          "sub_heading_text": ""
+        }
+      },
+      "jc-resources-passport": {
+        "type": "jc-resources-passport",
+        "blocks": {
+          "1589225939696": {
+            "type": "text",
+            "settings": {
+              "resource_name": "Civilian Passport",
+              "resource_url": "http:\/\/www.travel.state.gov"
+            }
+          }
+        },
+        "block_order": [
+          "1589225939696"
+        ],
+        "settings": {
+          "heading_text": "Passport",
+          "sub_heading_text": ""
+        }
+      },
+      "jc-resources-logbook": {
+        "type": "jc-resources-logbook",
+        "blocks": {
+          "1589226797066": {
+            "type": "text",
+            "settings": {
+              "resource_name": "Prosoft Binders",
+              "resource_url": "https:\/\/www.prosoftbinders.com",
+              "resource_type": "Logbook Printing Services",
+              "resource_img": "shopify:\/\/shop_images\/prosoft-binders-min.png"
+            }
+          },
+          "1589226704451": {
+            "type": "text",
+            "settings": {
+              "resource_name": "LogTen Pro Coradine Aviation",
+              "resource_url": "https:\/\/coradine.com",
+              "resource_type": "Electronic logbook",
+              "resource_img": "shopify:\/\/shop_images\/logten-min.png"
+            }
+          },
+          "1589226765137": {
+            "type": "text",
+            "settings": {
+              "resource_name": "AccuLog",
+              "resource_url": "https:\/\/www.aculogconversion.com",
+              "resource_type": "Ensure complete accuracy of your flight times",
+              "resource_img": "shopify:\/\/shop_images\/aculog-min.jpg"
+            }
+          }
+        },
+        "block_order": [
+          "1589226797066",
+          "1589226704451",
+          "1589226765137"
+        ],
+        "settings": {
+          "heading_text": "Logbooks",
+          "sub_heading_text": ""
+        }
+      },
+      "jc-resources-organizations": {
+        "type": "jc-resources-organizations",
+        "blocks": {
+          "1589820354982": {
+            "type": "text",
+            "settings": {
+              "resource_name": "National Gay Pilots Association (NGPA)",
+              "resource_url": "https:\/\/www.ngpa.org\/"
+            }
+          },
+          "1589820368448": {
+            "type": "text",
+            "settings": {
+              "resource_name": "Women in Aviation International (WAI)",
+              "resource_url": "https:\/\/www.wai.org\/"
+            }
+          },
+          "1589820384191": {
+            "type": "text",
+            "settings": {
+              "resource_name": "Organization of Black Aerospace Professionals (OBAP)",
+              "resource_url": "https:\/\/obap.org\/"
+            }
+          },
+          "1589820393547": {
+            "type": "text",
+            "settings": {
+              "resource_name": "Latino Pilots Association (LPA)",
+              "resource_url": "https:\/\/latinopilot.org\/"
+            }
+          },
+          "1589820407120": {
+            "type": "text",
+            "settings": {
+              "resource_name": "Professional Asian Pilots Association (PAPA)",
+              "resource_url": "https:\/\/www.asianpilots.org\/"
+            }
+          },
+          "d2a28b11-4cac-4b5c-954f-12f5d2bbe70c": {
+            "type": "text",
+            "settings": {
+              "resource_name": "Sisters of the Skies (SOS)",
+              "resource_url": "https:\/\/sistersoftheskies.org\/"
+            }
+          },
+          "830bb5c0-48a3-45f2-a5f9-b77b487efeb4": {
+            "type": "text",
+            "settings": {
+              "resource_name": "Female Aviators Sticking Together (FAST)",
+              "resource_url": "https:\/\/fastpilots.org\/"
+            }
+          },
+          "1589820424161": {
+            "type": "text",
+            "settings": {
+              "resource_name": "Aircraft Owners and Pilots Association (AOPA)",
+              "resource_url": "https:\/\/www.aopa.org\/"
+            }
+          },
+          "1589820432387": {
+            "type": "text",
+            "settings": {
+              "resource_name": "Rotary to Airline Group (RTAG)",
+              "resource_url": "https:\/\/www.rtag.org\/"
+            }
+          },
+          "1589820444836": {
+            "type": "text",
+            "settings": {
+              "resource_name": "Experimental Aircraft Association (EAA)",
+              "resource_url": "https:\/\/www.eaa.org\/eaa"
+            }
+          },
+          "1589820460440": {
+            "type": "text",
+            "settings": {
+              "resource_name": "Airlift\/Tankers Association",
+              "resource_url": "https:\/\/www.atalink.org\/"
+            }
+          },
+          "1589820477779": {
+            "type": "text",
+            "settings": {
+              "resource_name": "National Business Aviation Association (NBAA)",
+              "resource_url": "https:\/\/nbaa.org\/"
+            }
+          },
+          "1590159896035": {
+            "type": "text",
+            "settings": {
+              "resource_name": "National Association of Flight Instructors",
+              "resource_url": "https:\/\/www.nafinet.org\/"
+            }
+          },
+          "1590159912520": {
+            "type": "text",
+            "settings": {
+              "resource_name": "National Guard Association of the United States",
+              "resource_url": "https:\/\/www.ngaus.org\/"
+            }
+          },
+          "1590159950946": {
+            "type": "text",
+            "settings": {
+              "resource_name": "Army Aviation Association of America",
+              "resource_url": "https:\/\/www.quad-a.org\/"
+            }
+          }
+        },
+        "block_order": [
+          "1589820354982",
+          "1589820368448",
+          "1589820384191",
+          "1589820393547",
+          "1589820407120",
+          "d2a28b11-4cac-4b5c-954f-12f5d2bbe70c",
+          "830bb5c0-48a3-45f2-a5f9-b77b487efeb4",
+          "1589820424161",
+          "1589820432387",
+          "1589820444836",
+          "1589820460440",
+          "1589820477779",
+          "1590159896035",
+          "1590159912520",
+          "1590159950946"
+        ],
+        "settings": {
+          "heading_text": "Organizations",
+          "sub_heading_text": ""
+        }
+      },
+      "jc-resources-flight-training": {
+        "type": "jc-resources-flight-training",
+        "blocks": {
+          "1589820519555": {
+            "type": "text",
+            "settings": {
+              "resource_name": "Flight Training International (FTI)",
+              "resource_url": "https:\/\/ftiratings.com\/"
+            }
+          }
+        },
+        "block_order": [
+          "1589820519555"
+        ],
+        "settings": {
+          "heading_text": "Flight Training",
+          "sub_heading_text": "Flight training for initial, recurrent, re-qualification and specialty flight training including ATP-CTP, RVSM and type ratings (From the A320 to the B787)"
+        }
+      },
+      "jc-alpa-modal": {
+        "type": "jc-alpa-modal",
+        "settings": {
+        }
+      },
+      "jc-resources-drone-jobs": {
+        "type": "jc-resources-drone-jobs",
+        "blocks": {
+          "1602172142016": {
+            "type": "text",
+            "settings": {
+              "resource_name": "Aquiline Drones",
+              "resource_url": "http:\/\/adflight.to\/pilots"
+            }
+          }
+        },
+        "block_order": [
+          "1602172142016"
+        ],
+        "settings": {
+          "heading_text": "Drone Jobs",
+          "sub_heading_text": ""
+        }
+      },
+      "jc-resources-misc-jobs": {
+        "type": "jc-resources-misc-jobs",
+        "settings": {
+          "heading_text": "Miscellaneous Jobs",
+          "sub_heading_text": ""
+        }
+      },
+      "jc-product-section-standard": {
+        "type": "jc-product-section-standard",
+        "settings": {
+        }
+      },
+      "jc-product-section-prep": {
+        "type": "jc-product-section-prep",
+        "settings": {
+        }
+      },
+      "sk-resources-tabs": {
+        "type": "sk-resources-tabs",
+        "settings": {
+          "heading_1_text": "Applications",
+          "sub_heading_1_text": "These applications help you easily track your credentials online."
+        }
+      },
+      "jc-resources-financial-planning": {
+        "type": "jc-resources-financial-planning",
+        "blocks": {
+          "908e818c-5d0a-4a32-9b80-b8d26a963aab": {
+            "type": "text",
+            "settings": {
+              "resource_name": "Creative Planning",
+              "resource_url": "https:\/\/creativeplanning.com\/",
+              "resource_img": "shopify:\/\/shop_images\/creative-planning.png"
+            }
+          }
+        },
+        "block_order": [
+          "908e818c-5d0a-4a32-9b80-b8d26a963aab"
+        ],
+        "settings": {
+          "heading_text": "Financial Planning",
+          "sub_heading_text": ""
+        }
+      },
+      "list-collections-template": {
+        "type": "list-collections-template",
+        "settings": {
+          "display_type": "all",
+          "sort": "alphabetical",
+          "grid": 3
+        }
+      }
+    },
+    "content_for_index": [
+      "hero",
+      "featured-collections",
+      "feature-row",
+      "slideshow"
+    ]
+  },
+  "presets": {
+    "Default": {
+      "color_text": "#3d4246",
+      "color_body_text": "#69727b",
+      "color_sale_text": "#557B97",
+      "color_borders": "#e8e9eb",
+      "color_button": "#557B97",
+      "color_button_text": "#fff",
+      "color_small_button_text_border": "#3d4246",
+      "color_text_field": "#fff",
+      "color_text_field_text": "#000",
+      "color_text_field_border": "#949494",
+      "color_image_overlay_text": "#fff",
+      "color_image_overlay": "#3d4246",
+      "image_overlay_opacity": 40,
+      "color_body_bg": "#fff",
+      "type_header_font": "work_sans_n6",
+      "type_header_base_size": 26,
+      "type_base_font": "work_sans_n4",
+      "type_base_size": 16,
+      "type_bold_product_titles": false,
+      "share_facebook": true,
+      "share_twitter": true,
+      "share_pinterest": true,
+      "sections": {
+        "header": {
+          "type": "header",
+          "settings": {
+          }
+        },
+        "hero": {
+          "type": "hero",
+          "settings": {
+            "text_size": "large"
+          }
+        },
+        "slideshow": {
+          "type": "slideshow",
+          "blocks": {
+            "slideshow-0": {
+              "type": "image",
+              "settings": {
+              }
+            },
+            "slideshow-1": {
+              "type": "image",
+              "settings": {
+              }
+            }
+          },
+          "block_order": [
+            "slideshow-0",
+            "slideshow-1"
+          ],
+          "settings": {
+          }
+        },
+        "featured-collections": {
+          "type": "collection",
+          "settings": {
+            "collection": "frontpage"
+          }
+        },
+        "feature-row": {
+          "type": "feature-row",
+          "settings": {
+          }
+        },
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "link_list": {
+              "type": "link_list",
+              "settings": {
+              }
+            },
+            "text": {
+              "type": "text",
+              "settings": {
+              }
+            },
+            "newsletter": {
+              "type": "newsletter",
+              "settings": {
+              }
+            }
+          },
+          "block_order": [
+            "link_list",
+            "text",
+            "newsletter"
+          ],
+          "settings": {
+          }
+        }
+      },
+      "content_for_index": [
+        "hero",
+        "featured-collections",
+        "feature-row",
+        "slideshow"
+      ]
+    },
+    "Light": {
+      "color_text": "#162950",
+      "color_body_text": "#6d6d6d",
+      "color_sale_text": "#DA2F0C",
+      "color_borders": "#e4e4e4",
+      "color_button": "#DA2F0C",
+      "color_button_text": "#ffffff",
+      "color_small_button_text_border": "#162950",
+      "color_text_field": "#ffffff",
+      "color_text_field_text": "#162950",
+      "color_text_field_border": "#909090",
+      "color_image_overlay_text": "#ffffff",
+      "color_image_overlay": "#3d3d3d",
+      "image_overlay_opacity": 40,
+      "color_body_bg": "#f8f8f8",
+      "type_header_font": "muli_n6",
+      "type_header_base_size": 26,
+      "type_base_font": "muli_n4",
+      "type_base_size": 18,
+      "type_bold_product_titles": true,
+      "share_facebook": true,
+      "share_twitter": true,
+      "share_pinterest": true,
+      "social_twitter_link": "",
+      "social_facebook_link": "",
+      "social_pinterest_link": "",
+      "social_instagram_link": "",
+      "social_tumblr_link": "",
+      "social_snapchat_link": "",
+      "social_youtube_link": "",
+      "social_vimeo_link": "",
+      "favicon": "",
+      "checkout_header_image": "",
+      "checkout_logo_image": "",
+      "checkout_logo_position": "left",
+      "checkout_logo_size": "small",
+      "checkout_body_background_image": "",
+      "checkout_body_background_color": "#ffffff",
+      "checkout_input_background_color_mode": "white",
+      "checkout_sidebar_background_image": "",
+      "checkout_sidebar_background_color": "#e8f3f6",
+      "checkout_heading_font": "Roboto",
+      "checkout_body_font": "Source Sans Pro",
+      "checkout_accent_color": "#1990c6",
+      "checkout_button_color": "#23314e",
+      "checkout_error_color": "#ff6d6d",
+      "sections": {
+        "header": {
+          "type": "header",
+          "settings": {
+            "align_logo": "left",
+            "logo": "",
+            "logo_max_width": 135,
+            "main_linklist": "main-menu",
+            "message": true,
+            "color_bg": "#162950",
+            "color_text": "#ffffff"
+          }
+        },
+        "hero": {
+          "type": "hero",
+          "settings": {
+            "alignment": "center",
+            "hero_size": "x-large",
+            "text_size": "large"
+          }
+        },
+        "slideshow": {
+          "type": "slideshow",
+          "blocks": {
+            "slideshow-0": {
+              "type": "image",
+              "settings": {
+                "image": "",
+                "alignment": "center center"
+              }
+            },
+            "1492095993817": {
+              "type": "image",
+              "settings": {
+                "image": "",
+                "alignment": "center"
+              }
+            }
+          },
+          "block_order": [
+            "slideshow-0",
+            "1492095993817"
+          ],
+          "settings": {
+            "slideshow_height": "medium",
+            "text_size": "medium",
+            "autorotate": false,
+            "autorotate_speed": 5
+          }
+        },
+        "featured-collections": {
+          "type": "collection",
+          "settings": {
+            "grid": 3,
+            "rows": 1,
+            "show_vendor": true,
+            "show_view_all": true
+          }
+        },
+        "product-template": {
+          "type": "product-template",
+          "settings": {
+            "image_size": "medium",
+            "show_quantity_selector": false,
+            "show_variant_labels": true,
+            "show_vendor": false,
+            "enable_zoom": true,
+            "show_share_buttons": true
+          }
+        },
+        "collection-template": {
+          "type": "collection-template",
+          "settings": {
+            "layout": "grid",
+            "grid": 2,
+            "rows": 2,
+            "show_collection_image": true,
+            "show_vendor": false,
+            "sort_enable": true,
+            "tags_enable": true
+          }
+        },
+        "1492033809691": {
+          "type": "map",
+          "settings": {
+          }
+        },
+        "1492033877875": {
+          "type": "quotes",
+          "blocks": {
+            "1492033877875-0": {
+              "type": "quote",
+              "settings": {
+              }
+            }
+          },
+          "block_order": [
+            "1492033877875-0"
+          ],
+          "settings": {
+          }
+        },
+        "1492033924902": {
+          "type": "custom-content",
+          "blocks": {
+            "1492033924902-0": {
+              "type": "text",
+              "settings": {
+                "width": "100%",
+                "alignment": "center",
+                "align_text": "center"
+              }
+            }
+          },
+          "block_order": [
+            "1492033924902-0"
+          ],
+          "settings": {
+            "title": ""
+          }
+        },
+        "1492096252560": {
+          "type": "collection-list",
+          "blocks": {
+            "1492096252560-0": {
+              "type": "featured_collection",
+              "settings": {
+              }
+            },
+            "1492096252560-1": {
+              "type": "featured_collection",
+              "settings": {
+              }
+            },
+            "1492096252560-2": {
+              "type": "featured_collection",
+              "settings": {
+              }
+            }
+          },
+          "block_order": [
+            "1492096252560-0",
+            "1492096252560-1",
+            "1492096252560-2"
+          ],
+          "settings": {
+            "grid": 3
+          }
+        },
+        "blog-template": {
+          "type": "blog-template",
+          "settings": {
+            "layout": "grid",
+            "blog_show_author": true,
+            "blog_show_date": false
+          }
+        },
+        "article-template": {
+          "type": "article-template",
+          "settings": {
+            "blog_show_author": true,
+            "blog_show_date": true,
+            "show_share_buttons": true
+          }
+        },
+        "cart-template": {
+          "type": "cart-template",
+          "settings": {
+            "cart_notes_enable": false
+          }
+        },
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "link_list": {
+              "type": "link_list",
+              "settings": {
+              }
+            },
+            "text": {
+              "type": "text",
+              "settings": {
+              }
+            },
+            "newsletter": {
+              "type": "newsletter",
+              "settings": {
+              }
+            }
+          },
+          "block_order": [
+            "link_list",
+            "text",
+            "newsletter"
+          ],
+          "settings": {
+          }
+        }
+      },
+      "content_for_index": [
+        "hero",
+        "featured-collections",
+        "slideshow",
+        "1492033924902",
+        "1492096252560",
+        "1492033877875",
+        "1492033809691"
+      ]
+    }
+  }
+}

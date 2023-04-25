@@ -1,0 +1,64 @@
+<div class="bottom-content-block-resources">
+  <div class="bottom-heading-wrapper-resources">
+    <h4 class="bottom-heading-resources center">{{section.settings.heading_text}}</h4>
+    <div class="bottom-heading-breaker-resources"></div>
+  </div>
+  <div class="bottom-content-holder-resources">
+    <p class="bottom-content-text-heading-resources">{{section.settings.sub_heading_text}}</p>
+    <div class="bottom-flex-row-resources center">
+
+     {% for block in section.blocks %}
+       <div class="bottom-flex-col-resources">
+         <a href="{{block.settings.resource_url}}" class="bottom-flex-link-resources w-inline-block center" target="_blank">
+           <div>{{block.settings.resource_name}}</div>
+         </a>
+       </div>
+     {% endfor %}
+
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Passport - Resources" ,
+
+  "settings": [
+      {
+         "type": "text",
+         "id": "heading_text",
+         "default": "Passport",
+         "label": "Heading Text"
+      },
+      {
+         "type": "textarea",
+         "id": "sub_heading_text",
+         "default": "This is a link where you can find your passport documents.",
+         "label": "Sub Heading Text"
+      }
+
+  ],
+  
+  "blocks": [
+    {
+      "type": "text",
+      "name": "Pasport Resource",
+      "settings": [
+        
+        {
+          "label": "Name",
+          "id": "resource_name",
+          "type": "text"
+        },
+        {
+          "label": "Resource URL",
+          "id": "resource_url",
+          "type": "url"
+        }
+        
+
+      ]
+    }
+  ]
+}
+{% endschema %}

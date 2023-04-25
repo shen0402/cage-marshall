@@ -1,0 +1,47 @@
+
+<div class="hero-wrapper-waitlist">
+  <div class="hero-heading-wrapper-waitlist">
+    <h1 class="hero-heading-waitlist">Pilot Interview Prep Contact Information</h1>
+    <div class="hero-breaker-contact"></div>
+    <p class="hero-heading-text-waitlist">Thank you so much for your interest in our services.  We are honored that you have entrusted us to be a part of your career success.</p>
+    <p class="hero-heading-text-waitlist">Client scheduling is a dynamic and ever-changing process given the needs of today's airline industry.  It becomes increasingly more important to prioritize our client needs based on your dates of availability and our consultants’ schedules. In an effort to meet your personalized interview needs, please fill out the form below at your earliest convenience.</p>
+  </div>
+</div>
+    </div>
+  </div>
+</div>
+<div class="form-section-waitlist">
+  <div class="form-section-heading-wrapper-waitlist">
+    <h3 class="form-section-heading-waitlist">Pilot Interview Prep Contact Information</h3>
+    <div class="hero-breaker-contact"></div>
+    <p class="hero-heading-text-waitlist">Please fill out the form below including availability.</p>
+  </div>
+  <div class="form-container-waitlist">
+    <div class="form-block-waitlist w-form">
+
+      {% form 'contact', id:"Contact-Form" %}
+      {% if form.posted_successfully? %}
+        <div class="jc-form-success">
+          <div>Thank you! Your submission has been received!</div>
+        </div>
+        {% else %}
+        {{ form.errors | default_errors }}
+        <input type="hidden" name="contact[form-name]" value="Waitlist Form">
+        <div class="form-group-waitlist"><input type="text" class="form-input-waitlist w-input" maxlength="256" name="contact[Your Name]" placeholder="Your Name*" id="Your-Name" required=""></div>
+        <div class="form-group-waitlist"><input type="email" class="form-input-waitlist w-input" maxlength="256" name="contact[email]" placeholder="Email Address*" id="Email" required=""></div>
+        <div class="form-group-waitlist"><input type="text" class="form-input-waitlist w-input" maxlength="256" name="contact[Phone]" placeholder="Phone" id="Phone" required=""></div>
+        <div class="form-group-waitlist"><input type="text" class="form-input-waitlist w-input" maxlength="256" name="contact[Interviewing Airline]" placeholder="Interviewing Airline" id="Interviewing-Airline" required=""></div>
+        <div class="form-group-waitlist"><input type="text" class="form-input-waitlist w-input" maxlength="256" name="contact[Date of Interview]" placeholder="Date of Interview" id="Date-of-Interview" required=""></div>
+        <div class="form-group-waitlist"><label class="form-label-waitlist">What is your availability for the four weeks prior to your interview date? Specific dates and times are appreciated.</label><input type="text" class="form-input-waitlist w-input" maxlength="256" name="contact[Availability]" placeholder="Availability" id="Availability" required=""></div>
+        <div class="form-group-waitlist"><label class="form-label-waitlist">Please select one: are you a former, current, or new client?</label>
+          <div class="form-flex-row-waitlist"><label class="radio-button-field-waitlist w-radio"><input type="radio" id="former" name="contact[client-type]" value="former" class="w-form-formradioinput radio-button-waitlist w-radio-input" required=""><span for="former" class="radio-label-waitlist w-form-label">former</span></label><label class="radio-button-field-waitlist w-radio"><input type="radio" id="current-2" name="contact[client-type]" value="current" class="w-form-formradioinput radio-button-waitlist w-radio-input"><span for="current-2" class="radio-label-waitlist w-form-label">current</span></label><label class="radio-button-field-waitlist w-radio"><input type="radio" id="new-client" name="contact[client-type]" value="new-client" class="w-form-formradioinput radio-button-waitlist w-radio-input"><span for="new-client" class="radio-label-waitlist w-form-label">new client</span></label></div>
+        </div>
+        <div class="form-btn-wrapper-waitlist"><input type="submit" value="Submit" data-wait="Please wait..." class="form-btn-waitlist w-button"></div>
+
+      {% endif %}
+    {% endform %}
+
+
+    </div>
+  </div>
+</div>

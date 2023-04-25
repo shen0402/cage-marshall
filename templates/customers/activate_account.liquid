@@ -1,0 +1,20 @@
+<div class="page-wrapper-activate">
+  <div class="container-large">
+    <div class="account-page-heading-wrapper">
+      <h1 class="hero-heading-account">Activate Account</h1>
+    </div>
+    <div class="active-form-wrapper">
+    {% form 'activate_customer_password' %}
+      {{ form.errors | default_errors }}
+      <input type="password" value="" class="hero-login-input w-input" name="customer[password]" placeholder="{{ 'customer.activate_account.password' | t }}" id="CustomerPassword" required=""><input type="password" value="" class="hero-login-input w-input" name="customer[password_confirmation]" placeholder="{{ 'customer.activate_account.password_confirm' | t }}" id="CustomerPasswordConfirmation" required="">
+      <div class="activate-btn-wrapper">
+      
+          <input type="submit" value="{{ 'customer.activate_account.submit' | t }}" data-wait="Please wait..." class="order-btn w-button">
+      
+      </div>
+    {% endform %}
+  </div>
+  </div>
+</div>
+
+

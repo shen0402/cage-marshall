@@ -1,0 +1,15 @@
+{% comment %}
+  1123651780644 - Pilot Interview Prep Package
+
+  Past Webinar Recordings collection products
+
+  7148156878884
+  7148156649508
+  7148155863076
+  7148150226980{% endcomment %}
+
+{% unless product.id == 1123651780644 or product.id ==   7148156878884 or product.id == 7148156649508 or product.id == 7148155863076 or product.id == 7148150226980 %}
+  {% section 'jc-product-section-standard' %}
+{% else %}
+  {% section 'jc-product-section-prep' %}
+{% endunless %}

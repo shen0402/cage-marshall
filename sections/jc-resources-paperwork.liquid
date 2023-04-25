@@ -1,0 +1,69 @@
+<div class="bottom-content-block-resources">
+  <div class="bottom-heading-wrapper-resources">
+    <h4 class="bottom-heading-resources">{{section.settings.heading_text}}</h4>
+    <div class="bottom-heading-breaker-resources"></div>
+  </div>
+  <div class="bottom-content-holder-resources">
+    <p class="bottom-content-text-heading-resources">{{section.settings.sub_heading_text}}</p>
+    <ul class="bottom-list-resources">
+
+      {% for block in section.blocks %}
+        <li class="bottom-list-item-resources">
+          <div>{{block.settings.resource_text}}</div>
+          {% if block.settings.resource_details %}
+            <div class="bottom-list-rte-resources">{{block.settings.resource_details}}</div>
+          {% endif %}
+        </li>
+      {% endfor %}
+
+
+    </ul>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Paperwork - Resources" ,
+
+  "settings": [
+      {
+         "type": "text",
+         "id": "heading_text",
+         "default": "Paperwork",
+         "label": "Heading Text"
+      },
+      {
+         "type": "textarea",
+         "id": "sub_heading_text",
+         "default": "Here are instructions as to where you can find paperwork you may need in order to apply for a flying job.",
+         "label": "Sub Heading Text"
+      }
+
+  ],
+  
+  "blocks": [
+    {
+      "type": "text",
+      "name": "Paperwork Resource",
+      "settings": [
+        
+        {
+          "label": "Resource Text",
+          "id": "resource_text",
+          "type": "text"
+        },
+        {
+          "label": "Resource Details",
+          "id": "resource_details",
+          "type": "richtext"
+        }
+        
+
+      ]
+    }
+  ]
+}
+{% endschema %}
+
+
+

@@ -1,0 +1,98 @@
+<div class="hero-wrapper-services">
+  <div class="hero-row-services w-row">
+    <div class="hero-col-left-services hero-col-left-carte w-col w-col-6"></div>
+    <div class="hero-col-right-services w-col w-col-6">
+      <div class="hero-col-right-inner-carte">
+        <h2 class="hero-col-sub-heading-services">QUICK SHOP</h2>
+        <h1 class="hero-col-heading-carte">ALL PRODUCTS &amp; SERVICES</h1>
+        <div class="hero-col-breaker-services"></div>
+        <p class="hero-col-text-services">Customize your interview prep strategy with various services from Cage Marshall</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="shop" class="mid-wrapper-carte">
+  <div class="container-mid">
+     {% comment %}
+    <h3 class="mid-heading-services">Choose a Service Type:</h3>
+
+    <div class="tabs-menu-services">
+      <a href="/pages/quick-shop#shop" class="tab-menu-link-services w-inline-block">
+        <div>General Job Search Services</div>
+      </a>
+      <a href="#" class="tab-menu-link-services tab-menu-link-services-active tab-menu-link-services-border w-inline-block">
+        <div>Pilot Career Services</div>
+      </a>
+    </div>
+   {% endcomment %}
+    <div class="mid-content-holder-carte">
+
+      <div class="mid-content-block-carte">
+        <div class="mid-flex-heading-wrapper-carte">
+          <h4 class="mid-flex-heading-carte">Pilot Interview Prep Services</h4>
+          <div class="mid-flex-heading-breaker-carte"></div>
+        </div>
+        <div class="content-block-bottom-wrapper-carte">
+
+        {% for product in collections.quick-shop.products %}
+        {% comment %}
+        {% assign is_airline = false  %}  
+        {%- for tag in product.tags -%}
+          {% assign tag_lower = tag | downcase %}
+          {% if tag_lower == 'flying' %}
+            {% assign is_airline = true %}
+          {% endif %}
+        {% endfor %}
+        {% endcomment %}
+
+        {% comment %}
+        Pilot Interview Prep Package - 1123651780644
+        {% endcomment %}
+
+        {% unless product.id == 1123651780644 %}
+
+
+          {% form "product", product %}
+          {%- assign current_variant = product.selected_or_first_available_variant -%}
+          {%- assign compare_at_price = current_variant.compare_at_price -%}
+          {%- assign price = current_variant.price -%}
+           <div class="content-flex-row-carte">
+             <div class="content-flex-col-carte-1"><a href="{{product.url}}" class="content-flex-link-carte w-inline-block"><img src="//cdn.shopify.com/s/files/1/0065/3987/0244/files/view-min.png" alt="Eye" class="content-flex-img-carte"></a></div>
+             <div class="content-flex-col-carte-2">
+               <h5 class="content-flex-col-title-carte">{{product.title}}</h5>
+             </div>
+             <div class="content-flex-col-carte-3">
+               <div class="content-flex-col-price-text-carte">{{price | money }} USD</div>
+             </div>
+             <div class="content-flex-col-carte-4"><input type="submit" value="Add To Cart" class="content-flex-col-btn-carte w-button"></div>
+           </div> <!--flex row -->
+           <select name="id" class="jc-product-input-hide">
+             {% for variant in product.variants %}
+               <option {% if variant == product.selected_or_first_available_variant %} selected="selected" {% endif %}  value="{{ variant.id }}">{{ variant.title }} - {{ variant.price | money }}</option>
+             {% endfor %}
+           </select>
+           {% endform %}
+
+            
+        {% endunless %}
+
+        
+           
+           
+
+
+        {% endfor %}
+
+            </div>
+          </div>
+
+           
+      
+
+
+    </div>
+  </div>
+</div>
+
+
+{% section 'jc-newsletter-cta' %}

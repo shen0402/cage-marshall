@@ -1,0 +1,84 @@
+<div class="tab-section-about">
+  <div class="tabs-heading-wrapper-about">
+    <h3 class="tabs-heading-about">Our Team</h3>
+  </div>
+  <div data-duration-in="300" data-duration-out="100" class="tabs-about w-tabs">
+    <div class="tabs-menu-about w-tab-menu">
+      {% for block in section.blocks %}
+        <a data-w-tab="Tab {{forloop.index}}" class="tab-menu-link-about w-inline-block w-tab-link {% if forloop.first == true %}w--current{% endif %}">
+          <div class="tab-menu-inner-about">
+            <div class="tab-menu-text-about">{{block.settings.team_member_name}}</div>
+            <div class="tab-menu-text-about-alt">{{block.settings.team_member_title}}</div>
+          </div>
+        </a>
+      {% endfor %}
+    </div>
+
+
+    <div id="team-member" class="tabs-content-about w-tab-content">
+      {% for block in section.blocks %}
+        <div data-w-tab="Tab {{forloop.index}}" class="w-tab-pane {% if forloop.first == true %}w--tab-active{% endif %}">
+          <div class="tab-content-inner-about">
+            <div class="tab-content-flex-row-about">
+              <div class="tab-content-flex-col-left-about"><img src="{{ block.settings.team_member_image | img_url: '800x' }}" alt="{{block.settings.team_member_name}} Headshot" class="tab-content-flex-img-about"></div>
+              <div class="tab-content-flex-col-right-about">
+                <div class="tab-col-heading-wrapper-about">
+                  <h4 class="tab-col-heading-about">{{block.settings.team_member_name}}</h4>
+                  <div class="tab-col-heading-breaker-about"></div>
+                  <h5 class="tab-col-sub-heading-about">{{block.settings.team_member_title}}</h5>
+                </div>
+                <div class="tab-col-text-about">
+                  {{block.settings.team_member_bio}}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+
+      
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Our Team" ,
+  
+  "blocks": [
+    {
+      "type": "text",
+      "name": "Team Member",
+      "settings": [
+        
+        {
+          "label": "Name",
+          "id": "team_member_name",
+          "type": "text"
+        },
+        {
+          "label": "Title",
+          "id": "team_member_title",
+          "type": "text"
+        },
+        {
+          "label": "Headshot",
+          "id": "team_member_image",
+          "type": "image_picker"
+        },
+        {
+           "label": "Bio",
+           "id": "team_member_bio", 
+           "type": "richtext"
+        }
+
+      ]
+    }
+  ]
+}
+{% endschema %}
+
+
+
+
+

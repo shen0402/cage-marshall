@@ -1,0 +1,29 @@
+ <div class="cta-newsletter-section">
+    <div class="cta-newsletter-content-wrapper">
+      <h3 class="cta-newsletter-heading">Join Our Email List</h3>
+      <div class="cta-newsletter-breaker"></div>
+      <p class="cta-newsletter-text">Receive event information, new webinar or workshop announcements and specials from Cage Marshall directly to your inbox.</p>
+      <div class="cta-form-block w-form">
+
+        {% form 'customer' %}
+          {% if form.posted_successfully? %}
+            <div class="jc-form-success">
+              <div>Thank you! Your submission has been received!</div>
+            </div>
+            {% else %}
+            <input type="hidden" name="contact[accepts_marketing]" value="true">
+            <div class="cta-form-group"><input type="email" class="cta-form-input w-input" maxlength="256" name="contact[email]" data-name="Email" placeholder="Your Email" id="email" required=""><input type="submit" value="→" data-wait="Please wait..." class="cta-form-btn w-button"></div>
+          {% endif %}
+        {% endform %}
+
+
+      </div>
+    </div>
+</div>
+
+{% schema %}
+
+{
+  "name": "Newsletter Signup"
+}
+{% endschema %}

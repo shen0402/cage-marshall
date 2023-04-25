@@ -1,0 +1,67 @@
+
+
+
+ 	<div class="mid-wrapper-account">
+ 	  <div class="container-large">
+
+ 	    <div class="account-page-content-holder">
+ 	      <div class="activate-page-heading-wrapper">
+ 	        <h1 class="hero-heading-account">Your Cage Marshall Consulting Account</h1>
+ 	        <div class="account-link-wrapper">
+				<a href="/account/logout" class="account-logout-link w-inline-block" style="margin-right: 20px;"><div>LOG OUT</div></a>
+				<a href="/pages/resources" class="account-logout-link w-inline-block"><div>PILOT RESOURCES</div></a>
+			</div>
+ 	      </div>
+ 	      <h2 class="hero-sub-heading-account">Past Orders</h2>
+
+ 	      {% if customer.orders.size != 0 %}
+	 	      <div class="content-wrapper-account">
+	 	      	{% for order in customer.orders %}
+	 		        <div class="flex-row-account">
+	 		          <div class="flex-col-account flex-col-account-1">
+	 		            <a href="{{order.customer_url}}" class="flex-col-link-account w-inline-block">
+	 		              <div>{{ order.name }}</div>
+	 		            </a>
+	 		          </div>
+	 		          <div class="flex-col-account">
+	 		            <div class="flex-col-text-account">{{ order.created_at | date: format: 'date' }}</div>
+	 		          </div>
+	 		          <div class="flex-col-account flex-col-account-3">
+	 		            <div class="flex-col-text-account"><strong>{{ order.total_price | money }}</strong></div>
+	 		          </div>
+	 		        </div>
+	 	        {% endfor %}
+	 	        </div>
+	 	   {% else %}    
+			 	 <div class="account-page-empty-wrapper">
+			 	   <p class="account-page-empty-text">You haven't placed any orders yet</p>
+			 	 </div>
+			{% endif %} 	 
+
+			<div class="download-section-account">
+				<h2 class="hero-sub-heading-account">My Digital Products</h2>
+				{% assign is_download = false %}
+				{% for order in customer.orders %}
+					  {% for line_item in order.line_items %}
+					    {% if line_item.variant.metafields.dda.digital or order.metafields.dda.sendowl_order_id %}<a href="https://transactions.sendowl.com/orders/shopify_return/220862?order_id={{ order.id }}&email={{ order.email }}{% if order.metafields.dda.sendowl_order_id %}&sendowl_order_id={{ order.metafields.dda.sendowl_order_id }}{% endif %}" class="download-link-account" target="_blank"><span class="hero-col-download-link-inner-plus">{{line_item.product.title}}</span></a>{% assign is_download = true %}{% endif %}
+					{% endfor %}
+				{% endfor %}
+				{% unless is_download == true %}
+				    <div class="account-page-empty-wrapper">
+				      <p class="account-page-empty-text">No Digital Products Yet</p>
+				    </div>
+				  {% endunless %}
+			</div>
+			
+
+
+ 	      </div>
+ 	    </div>
+ 	  </div>
+
+ 	   
+
+
+
+
+

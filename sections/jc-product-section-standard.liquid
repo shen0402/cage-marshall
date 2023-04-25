@@ -1,0 +1,547 @@
+
+{%- assign current_variant = product.selected_or_first_available_variant -%}
+{%- assign compare_at_price = current_variant.compare_at_price -%}
+{%- assign price = current_variant.price -%}
+
+{% assign is_available = current_variant.available %}
+{% if is_available == true %}
+  {% assign cart_btn_text = 'Add to  Cart' %}
+  {% assign cart_disabled = '' %}
+  {% else %}
+  {% assign cart_btn_text = 'Sold Out' %}
+  {% assign cart_disabled = 'disabled="disabled"' %}
+{% endif %}
+
+{% if product.type == 'Gift Card' or product.images.size < 2 %}
+  {% assign jc_arrow_visibility = 'product-page-slider-arrow-hide' %}
+{% endif %}
+
+{% assign is_general = false  %}
+{% assign is_airline = false  %}
+{% assign is_general_service = false  %}
+
+{%- for tag in product.tags -%}
+  {% assign tag_lower = tag | downcase %}
+  {% if tag_lower == 'non-flying' %}
+    {% assign is_general = true %}
+  {% endif %}
+{% endfor %}
+
+{%- for tag in product.tags -%}
+  {% assign tag_lower = tag | downcase %}
+  {% if tag_lower == 'flying' %}
+    {% assign is_airline = true %}
+  {% endif %}
+{% endfor %}
+
+{%- for tag in product.tags -%}
+  {% assign tag_lower = tag | downcase %}
+  {% if tag_lower == 'general job search' %}
+    {% assign is_general_service = true %}
+  {% endif %}
+{% endfor %}
+
+
+<script type="text/javascript">
+  console.log('current variant is ' + '{{current_variant.title}}');
+  console.log('current variant price is ' + '{{price}}');
+</script>
+
+<div class="hero-wrapper-product {% if is_general_service %}hero-wrapper-product-general-service{% endif %}"></div>
+<div class="mid-wrapper-product">
+  <div class="container-small {%if product.id == 7161167839268 %} w-product-img{%endif%}">
+
+      {% comment %}
+        Airline Transition Manual
+        7161167839268
+      {% endcomment %}
+      {%if product.id == 7161167839268 %}
+        <div class="product-w-img-wrapper">
+
+
+          <div class="product-tab-section">
+            <div data-current="Tab 1" id="jc-show-slider-{{variant.id}} data-easing="ease" data-duration-in="300" data-duration-out="100" class="single-product-img-tabs w-tabs">
+              <div class="tabs-menu-2 w-tab-menu">
+                {% for image in product.images %}
+                  
+                  <a data-w-tab="Tab {{ forloop.index }}" class="tab-link-product w-inline-block single-product-thumbnail-img
+                  
+                  w-tab-link {% if forloop.first == true %}w--current{% endif %}" style="background-image: url({{ image | img_url: '512x' }});" jc-variant-id="{{ image | img_url: '800x' }}">
+                  <div class="tab-link-img-wrapper-product"><img src="{{ image | img_url: '800x' }}" loading="lazy" alt="{{product.title}}" class="tab-link-img-product"></div>
+                  </a>
+              
+                {% endfor %}
+              </div>
+              <div class="tabs-content-2 w-tab-content">
+        
+                {% for image in product.images %}
+                <div data-w-tab="Tab {{ forloop.index }}" class="tab-content-wrapper w-tab-pane {% if forloop.first == true %}w--tab-active{% endif %}">
+                  <div class="tab-inner-product">
+                  <div class="tab-img-wrapper-product">
+                    <div class="main-product-img-wrapper"><img src="{{ image | img_url: '1500x' }}" loading="eager" alt="{{image.alt}}" class="tab-img-product"></div>
+                  </div>
+                  </div>
+                </div>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+        
+        
+        
+
+
+
+
+        <div class="top-wrapper-service w-img">
+
+
+          
+    
+    
+            {% comment %}
+            Airline Transition Manual
+            7161167839268
+          {% endcomment %}
+          <h1 class="mid-heading-product">{{product.title}}</h1>
+          <div class="mid-breaker-product"></div>
+          <div class="price-wrapper-product">
+            {% if is_available == true %}
+              {% if compare_at_price > price  %}
+              <div class="price-text-product"><span id="price"><span style="text-decoration: line-through;">{{ compare_at_price | money }}</span> {{price | money }}</span></div>
+              {% else %}
+              <div class="price-text-product"><span id="price">{{price | money }}</span></div>
+              {% endif %}
+            {% else %}  
+            <div class="price-text-product"><span style="text-decoration: line-through;">{{product.price | money }}</span> Sold Out</div>
+            {% endif %}
+          </div>
+    
+          {% if product.type == 'Study Guide'  %}
+            <div class="img-wrapper-product">
+              <img src="{{product.featured_image | img_url: '800x'}}" class="img-product">
+            </div>
+          {% endif %}
+          
+    
+          <div class="product-description-rte">
+            {{product.description}}
+          </div>
+          <div class="form-wrapper-product">
+            <div class="form-block-product w-form">
+    
+              {% form "product", product %}
+                  {% if product.variants.size > 1 %}
+                    {% if product.options[0] %}
+                      {% assign used = '' %}
+                    <div class="product-options-flex-row">
+                      <label>{{ product.options[0] }}</label>
+                      <div class="select-style">
+                        <select id='select-one' class="form-select-input w-select">
+                          {% for variant in product.variants %}
+                            {% unless used contains variant.option1 %}
+                              <option value="{{ variant.option1 }}">{{ variant.option1 }}</option>
+                              {% capture used %}{{ used }} {{ variant.option1 }}{% endcapture %}
+                            {% endunless %}
+                          {% endfor %}
+                        </select>
+                      </div>
+                    </div>
+    
+                    {% endif %}
+                    {% if product.options[1] %}
+                      {% assign used = '' %}
+                    <div class="product-options-flex-row">
+                      <label>{{ product.options[1] }}</label>
+                      <div class="select-style">
+                        <select id='select-two' class="form-select-input w-select">
+                          {% for variant in product.variants %}
+                            {% unless used contains variant.option2 %}
+                              <option value="{{ variant.option2 }}">{{ variant.option2 }}</option>
+                              {% capture used %}{{ used }} {{ variant.option2 }}{% endcapture %}
+                            {% endunless %}
+                          {% endfor %}
+                        </select>
+                      </div>
+                    </div>
+                    {% endif %}
+                    {% if product.options[2] %}
+                      {% assign used = '' %}
+                    <div class="product-options-flex-row">
+                      <label>{{ product.options[2] }}</label>
+                      <div class="select-style">
+                        <select id='select-three' class="form-select-input w-select">
+                          {% for variant in product.variants %}
+                            {% unless used contains variant.option3 %}
+                              <option value="{{ variant.option3 }}">{{ variant.option3 }}</option>
+                              {% capture used %}{{ used }} {{ variant.option3 }}{% endcapture %}
+                            {% endunless %}
+                          {% endfor %}
+                        </select>
+                     </div>
+                   </div>
+                    {% endif %}
+                  {% endif %}
+                  <input type="hidden"name="id" id="product-select" value="{{ product.variants.first.id }}" />
+                  <div class="product-options-flex-row">
+                      <input type="number" class="product-page-input jc-product-input-hide w-input" value="1" min="1" name="quantity" id="field-2">
+                    </div>
+                  <div class="product-btn-wrapper">
+                    <input id="jc-add-to-cart-btn" type="submit" value="{{cart_btn_text}}" data-wait="Please wait..." class="mid-btn-product w-button">
+                  </div>        
+                {% endform %}
+    
+      
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
+      {%else%}
+
+
+
+
+
+
+    <div class="top-wrapper-service">
+      <div class="breadcrumb-wrapper-product">
+        {% if is_general %}
+          <a href="/pages/general-interview-preparation" class="breadcrumb-link-product w-inline-block">
+            <div>GENERAL JOB SEARCH SERVICES</div>
+          </a>
+          {% elsif is_airline %}
+           <a href="/pages/airline-interview-preparation" class="breadcrumb-link-product w-inline-block">
+             <div>PILOT CAREER SERVICES</div>
+           </a> 
+        {% endif %}
+        {% for collection in product.collections %}
+          {% comment %}Requires Notification - 261027692580{% endcomment %}
+              {% unless collection.id == 261027692580 %}
+
+                {% if is_general %}
+                <div class="breakcrumb-breaker-product"></div>
+                  <a href="{{collection.url}}/non-flying" class="breadcrumb-link-product w-inline-block">
+                    <div>{{collection.title}}</div>
+                  </a>
+                {% elsif is_airline %}
+                <div class="breakcrumb-breaker-product"></div>
+                  <a href="{{collection.url}}/flying" class="breadcrumb-link-product w-inline-block">
+                    <div>{{collection.title}}</div>
+                  </a>
+                {% else %}
+                  <a href="{{collection.url}}" class="breadcrumb-link-product w-inline-block">
+                    <div>{{collection.title}}</div>
+                  </a>
+                {% endif %}
+                  
+              {% endunless %}
+                
+        {% endfor %}
+        {% comment %}
+        <div class="breakcrumb-breaker-product"></div>
+        <a href="#" class="breadcrumb-link-product w-inline-block">
+          <div>Online Webinars</div>
+        </a>
+        {% endcomment %}
+      </div>
+
+
+        {% comment %}
+        Airline Transition Manual
+        7161167839268
+      {% endcomment %}
+      <h1 class="mid-heading-product">{{product.title}}</h1>
+      <div class="mid-breaker-product"></div>
+      <div class="price-wrapper-product">
+        {% if is_available == true %}
+          {% if compare_at_price > price  %}
+          <div class="price-text-product"><span id="price"><span style="text-decoration: line-through;">{{ compare_at_price | money }}</span> {{price | money }}</span></div>
+          {% else %}
+          <div class="price-text-product"><span id="price">{{price | money }}</span></div>
+          {% endif %}
+        {% else %}  
+        <div class="price-text-product"><span style="text-decoration: line-through;">{{product.price | money }}</span> Sold Out</div>
+        {% endif %}
+      </div>
+
+      {% if product.type == 'Study Guide'  %}
+        <div class="img-wrapper-product">
+          <img src="{{product.featured_image | img_url: '800x'}}" class="img-product">
+        </div>
+      {% endif %}
+      
+
+      <div class="product-description-rte">
+        {{product.description}}
+      </div>
+      <div class="form-wrapper-product">
+        <div class="form-block-product w-form">
+
+          {% form "product", product %}
+              {% if product.variants.size > 1 %}
+                {% if product.options[0] %}
+                  {% assign used = '' %}
+                <div class="product-options-flex-row">
+                  <label>{{ product.options[0] }}</label>
+                  <div class="select-style">
+                    <select id='select-one' class="form-select-input w-select">
+                      {% for variant in product.variants %}
+                        {% unless used contains variant.option1 %}
+                          <option value="{{ variant.option1 }}">{{ variant.option1 }}</option>
+                          {% capture used %}{{ used }} {{ variant.option1 }}{% endcapture %}
+                        {% endunless %}
+                      {% endfor %}
+                    </select>
+                  </div>
+                </div>
+
+                {% endif %}
+                {% if product.options[1] %}
+                  {% assign used = '' %}
+                <div class="product-options-flex-row">
+                  <label>{{ product.options[1] }}</label>
+                  <div class="select-style">
+                    <select id='select-two' class="form-select-input w-select">
+                      {% for variant in product.variants %}
+                        {% unless used contains variant.option2 %}
+                          <option value="{{ variant.option2 }}">{{ variant.option2 }}</option>
+                          {% capture used %}{{ used }} {{ variant.option2 }}{% endcapture %}
+                        {% endunless %}
+                      {% endfor %}
+                    </select>
+                  </div>
+                </div>
+                {% endif %}
+                {% if product.options[2] %}
+                  {% assign used = '' %}
+                <div class="product-options-flex-row">
+                  <label>{{ product.options[2] }}</label>
+                  <div class="select-style">
+                    <select id='select-three' class="form-select-input w-select">
+                      {% for variant in product.variants %}
+                        {% unless used contains variant.option3 %}
+                          <option value="{{ variant.option3 }}">{{ variant.option3 }}</option>
+                          {% capture used %}{{ used }} {{ variant.option3 }}{% endcapture %}
+                        {% endunless %}
+                      {% endfor %}
+                    </select>
+                 </div>
+               </div>
+                {% endif %}
+              {% endif %}
+              <input type="hidden"name="id" id="product-select" value="{{ product.variants.first.id }}" />
+              <div class="product-options-flex-row">
+                  <input type="number" class="product-page-input jc-product-input-hide w-input" value="1" min="1" name="quantity" id="field-2">
+                </div>
+              <div class="product-btn-wrapper">
+                <input id="jc-add-to-cart-btn" type="submit" value="{{cart_btn_text}}" data-wait="Please wait..." class="mid-btn-product w-button">
+              </div>        
+            {% endform %}
+
+  
+        </div>
+      </div>
+    </div>
+    {%endif%}
+
+
+  </div>
+
+{% comment %} General Job Search Services ID 166303432740 {% endcomment %}
+{% assign jc_hide_related = false  %}
+
+{% for collection in product.collections  %}
+  {% if collection.id == 166303432740 %}
+    {% assign jc_hide_related = true  %}
+  {% endif %}
+{% endfor %}
+
+
+{% unless jc_hide_related %}
+  <div class="container-large">
+
+    <h3 class="bottom-heading-product">OTHER PRODUCTS &amp; SERVICES</h3>
+    <div class="bottom-flex-row-product">
+      <div class="bottom-flex-col-product">
+        <div class="bottom-flex-col-inner-product" data-ix="product-bottom-col">
+          <h3 class="bottom-flex-col-heading-product">Study Guides</h3>
+          <div class="bottom-overlay-product">
+            <div class="bottom-overlay-content-wrapper-product">
+              <h4 class="bottom-overlay-heading-product">Study Guides</h4>
+              <p class="bottom-overlay-text-product">Our individual consulting services allow you to choose a topic to review one-on-one with one of our trained interview prep consultants.</p>
+              <div class="bottom-overlay-btn-wrapper-product">
+                <a href="/collections/study-guides" class="bottom-overlay-btn-product w-inline-block">
+                  <div class="bottom-btn-breaker-product"></div>
+                  <div>View All</div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bottom-flex-col-product">
+        <div class="bottom-flex-col-inner-product bottom-flex-col-inner-product-2" data-ix="product-bottom-col">
+          <h3 class="bottom-flex-col-heading-product">On-Demand Videos</h3>
+          <div class="bottom-overlay-product">
+            <div class="bottom-overlay-content-wrapper-product">
+              <h4 class="bottom-overlay-heading-product">On-Demand Videos</h4>
+              <p class="bottom-overlay-text-product">Our individual consulting services allow you to choose a topic to review one-on-one with one of our trained interview prep consultants.</p>
+              <div class="bottom-overlay-btn-wrapper-product">
+                {% if is_general %}
+                  <a href="/collections/online-courses/non-flying" class="bottom-overlay-btn-product w-inline-block">
+                {% elsif is_airline %}
+                  <a href="/collections/online-courses/flying" class="bottom-overlay-btn-product w-inline-block">
+                {% else %}
+                  <a href="/collections/online-courses/non-flying" class="bottom-overlay-btn-product w-inline-block">
+                {% endif %}
+                  <div class="bottom-btn-breaker-product"></div>
+                  <div>View All</div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bottom-flex-col-product">
+        <div class="bottom-flex-col-inner-product bottom-flex-col-inner-product-3" data-ix="product-bottom-col">
+          <h3 class="bottom-flex-col-heading-product">ONE-ON-ONE CONSULTING SERVICES</h3>
+          <div class="bottom-overlay-product">
+            <div class="bottom-overlay-content-wrapper-product">
+              <h4 class="bottom-overlay-heading-product">ONE-ON-ONE CONSULTING SERVICES</h4>
+              <p class="bottom-overlay-text-product">Our individual consulting services allow you to choose a topic to review one-on-one with one of our trained interview prep consultants.</p>
+              <div class="bottom-overlay-btn-wrapper-product">
+                  {% if is_general %}
+                    <a href="/collections/one-on-one-consulting-services/non-flying" class="bottom-overlay-btn-product w-inline-block">
+                  {% elsif is_airline %}
+                    <a href="/collections/one-on-one-consulting-services/flying" class="bottom-overlay-btn-product w-inline-block">
+                  {% else %}
+                    <a href="/collections/one-on-one-consulting-services/flying" class="bottom-overlay-btn-product w-inline-block">
+                  {% endif %}
+                  <div class="bottom-btn-breaker-product"></div>
+                  <div>View All</div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> <!-- container large -->
+{% endunless %}
+
+</div>
+
+{% comment %} ////////////////////// image stuff ////////////////////// 
+{% for image in product.images %}
+
+{% endfor %}
+
+<!-- change to show variant image only -->
+<div class="product-page-variant-img-holder">
+  <img src="" class="product-page-variant-img">
+</div>
+
+{% endcomment %}
+
+{% comment %} ////////////////////// image background stuff ////////////////////// 
+  <div class="" {% if product.featured_image %}style="background-image: url({{ product.featured_image | img_url: '800x' }});"{% endif %}></div>
+{% endcomment %}
+
+{% comment %} ////////////////////// similar product stuff ////////////////////// 
+{% for collection in product.collections %}
+    {% if collection.id != 123456 and collection.id != 123456%}
+      {% assign same_collection = collection %}
+      {% for product in same_collection.products limit:4 %}
+        
+      {% endfor %}
+      {% break %}
+    {% endif %}
+{% endfor %}
+{% endcomment %}
+
+
+
+ {% comment %} //////////////////////  price stuff ////////////////////// 
+ {% if is_available == true %}
+   {% if compare_at_price > price  %}
+    <div class="price-text-product">
+     <span style="text-decoration: line-through">{{compare_at_price | money }}</span> <span id="price">{{current_variant.price | money }}</span>
+    </div>
+    {% else %}
+   <div class="price-text-product" id="price">
+  {{current_variant.price | money }}
+   </div>
+   {% endif %}
+{% else %}
+  <div class="product-page-price-text"><span style="text-decoration: line-through;">{{product.price | money }}</span> Sold Out</div>
+{% endif %}
+{% endcomment %}
+
+{% comment %} //////////////////////  product form ////////////////////// 
+
+{% form "product", product %}
+    {% if product.variants.size > 1 %}
+      {% if product.options[0] %}
+        {% assign used = '' %}
+      <div class="product-options-flex-row">
+        <label for="select-one" class="product-options-label">{{ product.options[0] }}</label>
+        <div class="select-style">
+          <select id='select-one' class="product-page-select w-select">
+            {% for variant in product.variants %}
+              {% unless used contains variant.option1 %}
+                <option value="{{ variant.option1 }}">{{ variant.option1 }}</option>
+                {% capture used %}{{ used }} {{ variant.option1 }}{% endcapture %}
+              {% endunless %}
+            {% endfor %}
+          </select>
+        </div>
+      </div>
+
+      {% endif %}
+      {% if product.options[1] %}
+        {% assign used = '' %}
+      <div class="product-options-flex-row">
+        <label for="select-one" class="product-options-label">{{ product.options[1] }}</label>
+        <div class="select-style">
+          <select id='select-two' class="product-page-select w-select">
+            {% for variant in product.variants %}
+              {% unless used contains variant.option2 %}
+                <option value="{{ variant.option2 }}">{{ variant.option2 }}</option>
+                {% capture used %}{{ used }} {{ variant.option2 }}{% endcapture %}
+              {% endunless %}
+            {% endfor %}
+          </select>
+        </div>
+      </div>
+      {% endif %}
+      {% if product.options[2] %}
+        {% assign used = '' %}
+      <div class="product-options-flex-row">
+        <label for="select-one" class="product-options-label">{{ product.options[2] }}</label>
+        <div class="select-style">
+          <select id='select-three' class="product-page-select w-select">
+            {% for variant in product.variants %}
+              {% unless used contains variant.option3 %}
+                <option value="{{ variant.option3 }}">{{ variant.option3 }}</option>
+                {% capture used %}{{ used }} {{ variant.option3 }}{% endcapture %}
+              {% endunless %}
+            {% endfor %}
+          </select>
+       </div>
+     </div>
+      {% endif %}
+    {% endif %}
+    <input type="hidden"name="id" id="product-select" value="{{ product.variants.first.id }}" />
+    <div class="product-options-flex-row">
+      <div class="product-options-label">Quantity</div>
+        <input type="number" class="product-page-input w-input" value="1" min="1" name="quantity" id="field-2">
+      </div>
+    <div class="product-btn-wrapper">
+      <input id="jc-add-to-cart-btn" type="submit" value="{{cart_btn_text}}" data-wait="Please wait..." class="btn-alt w-button" {{cart_disabled}}>
+    </div>        
+  {% endform %}
+
+  {% endcomment %}

@@ -1,0 +1,50 @@
+
+
+<div class="hero-wrapper-login"></div>
+<div class="mid-wrapper-login">
+  <div class="mid-heading-wrapper-login">
+    <h1 class="hero-heading-login">CREATE AN ACCOUNT</h1>
+    <p class="hero-text-login">We thrive on the success of our clients!<br>Create an account and let&#x27;s get you started down the path of your dreams.</p>
+  </div>
+  <div class="form-block-login w-form">
+    <div class="form-design-block-login"></div>
+
+    {% form 'create_customer', id: 'RegisterForm' %}
+    
+      <div class="form-top-wrapper-login">
+        <div class="form-img-wrapper-contact"><img src="//cdn.shopify.com/s/files/1/0065/3987/0244/files/cage-mark-white-min.png" alt="Cage Marshall Mark" class="form-img-contact"></div>
+        {{ form.errors | default_errors }}
+        <div class="form-row-login w-row">
+          <div class="form-col-login w-col w-col-6"><input type="text" class="form-input-login w-input" maxlength="256" name="customer[first_name]" placeholder="First Name*" id="RegisterForm-FirstName" required=""></div>
+          <div class="form-col-login w-col w-col-6"><input type="text" class="form-input-login w-input" maxlength="256" name="customer[last_name]" placeholder="Last Name*" id="RegisterForm-LastName" required=""></div>
+        </div>
+        <div class="form-row-login w-row">
+          <div class="form-col-login w-col w-col-6"><input type="email" class="form-input-login w-input" maxlength="256" name="customer[email]" placeholder="Email*" id="Email" required=""></div>
+          <div class="form-col-login w-col w-col-6"><input type="password" class="form-input-login w-input" maxlength="256" name="customer[password]" placeholder="Password*" id="RegisterForm-password" required=""></div>
+        </div>
+        <div class="form-checkbox-section-login"><label class="w-checkbox checkbox-field-login"><input type="checkbox" id="checkbox" name="customer[accepts_marketing]" class="w-checkbox-input checkbox-login" checked="checked" value="true"><span class="checkbox-label-login w-form-label">Sign me up to recieve emails of upcoming events and webinars</span></label></div>
+      </div>
+      <div class="form-btn-wrapper"><input type="submit" value="Create Account" data-wait="Please wait..." class="form-btn w-button"></div>
+    {% endform %}
+   
+  </div>
+</div>
+
+
+{% comment %}
+{% form 'create_customer', id: 'RegisterForm' %}
+  <h1 class="form-heading-login">Create Account</h1>
+  {{ form.errors | default_errors }}
+  <input type="text" class="form-input-login w-input" maxlength="256" name="customer[first_name]" placeholder="First Name" id="RegisterForm-FirstName" required="">
+  <input type="text" class="form-input-login w-input" maxlength="256" name="customer[last_name]" placeholder="Last Name" id="RegisterForm-LastName" required="">
+  <input type="email" class="form-input-login w-input" maxlength="256" name="customer[email]" placeholder="Email Address" id="RegisterForm-email" required="">
+  <input type="password" class="form-input-login w-input" maxlength="256" name="customer[password]" placeholder="Password" id="RegisterForm-password" required="">
+  <div class="form-btn-wrapper-login">
+    <input type="submit" value="Create" data-wait="Please wait..." class="btn-main w-button"></div>
+  <div class="form-bottom-wrapper-login">
+    <a href="/account/login" class="form-bottom-link-login w-inline-block">
+      <div>Already have an account? Log in here.</div>
+    </a>
+  </div>
+{% endform %}
+{% endcomment %}

@@ -1,0 +1,230 @@
+ {% comment %}
+	<div class="" {% if product.featured_image %}style="background-image: url({{ product.featured_image | img_url: '800x' }});"{% endif %}></div>
+
+
+
+       <select id="price-sort" name="price-sort" class="filter-input-sort w-select">
+         <option value="none">Price</option>
+         <option value="price-ascending">low - high</option>
+         <option value="price-descending">high - low</option>
+       </select>
+
+       <select id="color-filter" name="color-filter" class="filter-input-category w-select">
+           <option value="none">Categories</option>
+           <option value="/">All</option>
+         {%- for tag in collection.all_tags -%}
+           <option value="/collections/{{ collection.handle }}/{{ tag | handleize }}">{{tag}}</option>
+         {% endfor %}
+       </select>
+
+{% endcomment %}
+
+<style type="text/css">
+	.shopify-product-form {
+		height: 100%;
+	}
+</style>
+
+{% assign is_general = false  %}
+{% assign is_airline = false  %}
+
+{%- for tag in collection.tags -%}
+  {% assign tag_lower = tag | downcase %}
+  {% if tag_lower == 'non-flying' %}
+    {% assign is_general = true %}
+  {% endif %}
+{% endfor %}
+
+{%- for tag in collection.tags -%}
+  {% assign tag_lower = tag | downcase %}
+  {% if tag_lower == 'flying' %}
+    {% assign is_airline = true %}
+  {% endif %}
+{% endfor %}
+
+
+
+
+<div class="hero-wrapper-collection">
+  <div class="hero-row-collection w-row">
+    <div class="hero-col-left-collection w-col w-col-6" {% if collection.image %}style="background-image: url({{ collection.image | img_url: '1200x' }});"{% endif %}></div>
+    <div class="hero-col-right-collection w-col w-col-6">
+      <div class="hero-col-right-inner-collection">
+        <h1 class="hero-col-heading-collection">{{collection.title}}</h1>
+        <div class="hero-col-breaker-collection"></div>
+        <p class="hero-col-text-collection">{{collection.description}}</p>
+        {% comment %} General Job Search Services ID 166303432740 {% endcomment %}
+        {% if collection.id == 166303432740 %}
+
+          <div class="hero-col-btn-wrapper"><a href="/" class="hero-col-btn w-button">Back to Home Page</a></div>
+
+          {% else %}
+            {% if is_general %}
+            <div class="hero-col-btn-wrapper"><a href="/pages/general-interview-preparation" class="hero-col-btn w-button">Back to Main Shop</a></div>
+          {% elsif is_airline %}  
+            <div class="hero-col-btn-wrapper"><a href="/pages/airline-interview-preparation" class="hero-col-btn w-button">Back to Main Shop</a></div>
+          {% else %}
+            <div class="hero-col-btn-wrapper"><a href="/pages/airline-interview-preparation" class="hero-col-btn w-button">Back to Main Shop</a></div>
+          {% endif %}
+          
+        {% endif %}
+        
+        
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="mid-wrapper-collection" id="main-content">
+  {% comment %} study guide ID 44894224420 {% endcomment %}
+  {% comment %} General Job Search Services ID 166303432740 {% endcomment %}
+{% comment %}
+  {% if collection.id != 44894224420 and collection.id != 166303432740 %} 
+    <div class="mid-heading-section-collection">
+      <h3 class="mid-heading-collection">Choose a Service Type:</h3>
+      <div class="mid-menu-collection">
+        <a href="{{collection.url}}/non-flying#main-content" class="mid-menu-link-collection w-inline-block">
+          <div>General Job Search Services</div>
+        </a>
+        <a href="{{collection.url}}/flying#main-content" class="mid-menu-link-collection mid-menu-link-collection-border w-inline-block">
+          <div>Pilot Career Services</div>
+        </a>
+      </div>
+    </div>
+  {% endif %}
+  {% endcomment %}
+
+  <div class="mid-content-wrapper-collection">
+    {% if collection.products_count > 0 %}
+    <div class="mid-flex-row-wrapper-collection">
+      
+
+        
+      <div class="mid-flex-row-collection">
+
+      	{% for product in collection.products %}
+        {% assign is_airline_product = false %}
+        {%- for tag in product.tags -%}
+          {% assign tag_lower = tag | downcase %}
+          {% if tag_lower == 'flying' %}
+            {% assign is_airline_product = true %}
+          {% endif %}
+        {% endfor %}
+
+      	<div class="flex-col-collection">
+			{% form "product", product %}
+      {%- assign current_variant = product.selected_or_first_available_variant -%}
+      {%- assign compare_at_price = current_variant.compare_at_price -%}
+      {%- assign price = current_variant.price -%}
+			{% assign productShortDescription = product.metafields.productShortDesc.shortDesc %}
+      {% assign hide_form = false %}
+      {% comment %}
+        1123651780644 - Pilot Interview Prep Package
+
+        Past Webinar Recordings collection products
+
+        7146582016036
+        7146576642084
+        7146569269284
+        7146561601572
+      {% endcomment %}
+      {% if product.id == 1123651780644 or product.id ==   7148156878884 or product.id == 7148156649508 or product.id == 7148155863076 or product.id == 7148150226980 or product.id == 7146576642084 or product.id == 7146569269284 or product.id == 7146561601572 %}
+        {% assign hide_form = true %}
+      {% endif %}
+      
+			<input type="hidden" id="Quantity" name="quantity" value="1" min="1" max="1" class="">
+      		  <div class="flex-col-inner-collection {% if is_airline_product %}flex-col-inner-collection-airline{% endif %}">
+      		    <div class="flex-col-top-wrapper-collection">
+      		      <h3 class="flex-col-heading-collection">{{product.title}}</h3>
+      		      <div class="flex-col-top-breaker-collection"></div>
+      		      <div class="flex-col-text-collection">{{productShortDescription}}</div>
+
+      		      {% if compare_at_price > price  %}
+      		      	<div class="flex-col-price-text-collection"><span style="text-decoration: line-through;">{{ compare_at_price | money }}</span> {{price | money }} USD</div>
+      		      {% else %}
+      		      	<div class="flex-col-price-text-collection">{{price | money }} USD</div>
+      		      {% endif %}
+
+                  {% if product.has_only_default_variant %}
+
+                      <select name="id" class="jc-product-input-hide">
+                        {% for variant in product.variants %}
+                          <option {% if variant == product.selected_or_first_available_variant %} selected="selected" {% endif %}  value="{{ variant.id }}">{{ variant.title }} - {{ variant.price | money }}</option>
+                        {% endfor %}
+                      </select>
+
+                  {% else %}
+
+                    {% unless hide_form == true %}
+                        <select id="select-one" name="id" class="jc-product-page-input-select w-select">
+                          {% for variant in product.variants %}
+                            <option {% if variant == product.selected_or_first_available_variant %} selected="selected" {% endif %}  value="{{ variant.id }}">{{ variant.title }} - {{ variant.price | money }}</option>
+                          {% endfor %}
+                        </select>
+                    {% endunless %}
+                    
+
+                {% endif %}
+
+
+      		    </div>
+      		    <div class="flex-col-bottom-wrapper-collection">
+                {% if hide_form == true %}
+                    <input type="submit" value="Add To Cart" class="" style="display:none;" disabled="disabled">
+                    <a href="{{product.url}}" class="bottom-flex-link-collection bottom-flex-link-collection-full w-inline-block">
+                      <div>Learn More</div>
+                    </a>
+                  {% else %}
+                    <input type="submit" value="Add To Cart" class="bottom-flex-link-collection w-button">
+                    <a href="{{product.url}}" class="bottom-flex-link-collection bottom-flex-link-collection-border w-inline-block">
+                      <div>Learn More</div>
+                    </a>
+                {% endif %}
+      		      
+
+      		    </div>
+      		  </div>
+            
+      		</div>
+      		{% endform %}
+      	{% endfor %}
+        
+
+
+      </div> <!-- flex row -->
+
+    </div> <!-- flex row wrapper-->
+      {% else %}
+      <div class="jc-collection-empty-wrapper">
+        <p class="jc-collection-empty-text">There are currently no events scheduled for this service. Please sign up for our email list below to be notified next time there is an upcoming event.</p>
+      </div>
+    {% endif %}
+  </div>
+</div>
+
+{% section 'jc-newsletter-cta' %}
+{% comment %}
+
+{% paginate collection.products by 12 %}
+	{% for product in collection.products %}
+		{% assign price = product.price %}
+		{% assign compare_at_price = product.compare_at_price_max %}
+
+
+		{% if compare_at_price > price  %}
+			<div class=""><span style="text-decoration: line-through;">{{ compare_at_price | money }}</span> {{price | money }}</div>
+		{% else %}
+			<div class="">{{product.price | money }}</div>
+		{% endif %}
+
+
+	{% endfor %}
+
+	{% if paginate.pages > 1 %}
+		{% include 'pagination' %}
+	{% endif %}
+{% endpaginate %}
+{% endcomment %}

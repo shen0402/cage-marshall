@@ -1,0 +1,68 @@
+
+
+<div class="mid-wrapper-account">
+  <div class="container-large">
+    <div class="account-page-content-holder">
+      <div class="account-page-heading-wrapper">
+        <h1 class="hero-heading-account">Order {{ order.name }}</h1>
+      </div>
+      <div class="content-wrapper-account">
+        <div class="flex-row-order-heading">
+          <div class="flex-col-order">
+            <div class="flex-col-heading-text-order">Product</div>
+          </div>
+          <div class="flex-col-order">
+            <div class="flex-col-heading-text-order">Price</div>
+          </div>
+          <div class="flex-col-order">
+            <div class="flex-col-heading-text-order">Quantity</div>
+          </div>
+          <div class="flex-col-order">
+            <div class="flex-col-heading-text-order">Total Price</div>
+          </div>
+        </div>
+
+        {%- for line_item in order.line_items -%}
+          <div class="flex-row-order">
+            <div class="flex-col-order">
+              <a href="{{line_item.product.url}}" class="flex-col-link-order w-inline-block">
+                <div>{{ line_item.product.title }}</div>
+              </a>
+            </div>
+            <div class="flex-col-order">
+              <div class="flex-col-text-order">{{ line_item.final_price | money }}</div>
+            </div>
+            <div class="flex-col-order">
+              <div class="flex-col-text-order">{{line_item.quantity}}</div>
+            </div>
+            <div class="flex-col-order">
+              <div class="flex-col-text-order"><strong>{{line_item.final_line_price | money }}</strong></div>
+            </div>
+          </div>
+        {%- endfor -%}
+    
+
+        <div class="flex-row-order-total">
+          <div class="flex-col-order">
+            <a href="#" class="flex-col-link-order w-inline-block">
+              <div><strong>Total</strong></div>
+            </a>
+          </div>
+          <div class="flex-col-order">
+            <div class="flex-col-text-order"> </div>
+          </div>
+          <div class="flex-col-order">
+            <div class="flex-col-text-order"> </div>
+          </div>
+          <div class="flex-col-order">
+            <div class="flex-col-text-order"><strong>{{ order.line_items_subtotal_price | money }}</strong></div>
+          </div>
+        </div>
+
+      </div>
+      <div class="order-btn-wrapper"><a href="/account" class="order-btn w-button">Back to Account</a></div>
+    </div>
+  </div>
+</div>
+
+

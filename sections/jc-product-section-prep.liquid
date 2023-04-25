@@ -1,0 +1,339 @@
+{%- assign current_variant = product.selected_or_first_available_variant -%}
+{%- assign compare_at_price = current_variant.compare_at_price -%}
+{%- assign price = current_variant.price -%}
+{%- assign selected_variant_id = current_variant.id -%}
+
+{% assign is_available = current_variant.available %}
+{% if is_available == true %}
+  {% assign cart_btn_text = 'Add to  Cart' %}
+  {% assign cart_disabled = '' %}
+{% else %}
+  {% assign cart_btn_text = 'Sold Out' %}
+  {% assign cart_disabled = 'disabled="disabled"' %}
+{% endif %}
+
+{% if product.type == 'Gift Card' or product.images.size < 2 %}
+  {% assign jc_arrow_visibility = 'product-page-slider-arrow-hide' %}
+{% endif %}
+
+{% assign custom_heading_1 = product.metafields.prep_package.heading_1 %}
+{% assign custom_content_1 = product.metafields.prep_package.content_1 %}
+{% assign custom_heading_2 = product.metafields.prep_package.heading_2 %}
+{% assign custom_content_2 = product.metafields.prep_package.content_2 %}
+{% assign custom_content_bottom_text = product.metafields.prep_package.bottom_text %}
+
+
+<div class="hero-wrapper-service"></div>
+<div class="mid-wrapper-service">
+  <div class="container-small">
+    <div class="top-wrapper-service">
+      <h1 class="mid-heading-service">{{product.title}}
+      </h1>
+      <div class="mid-breaker-service"></div>
+      {% comment %}
+        <div class="mid-text-holder-service">
+        <p class="mid-text-service"><strong><em>This service is designed for the applicant who currently does NOT have an interview.</em></strong></p>
+        </div>
+      {% endcomment %}
+      <div class="mid-text-holder-service">
+
+        <div class="mid-text-service">
+          {{product.description}}
+        </div>
+      </div>
+
+      <div class="cost-wrapper-service">
+        <h4 class="cost-heading-service">Total Cost:</h4>
+        {% if is_available == true %}
+          {% if compare_at_price > price  %}
+            <div class="cost-text-service">
+              <span id="price">
+                <span style="text-decoration: line-through;">{{ compare_at_price | money }}
+                </span>
+                {{price | money }}
+              </span>
+            </div>
+          {% else %}
+            <div class="cost-text-service">
+              <span id="price">{{price | money }}
+              </span>
+            </div>
+          {% endif %}
+        {% else %}
+          <div class="cost-text-service">
+            <span style="text-decoration: line-through;">{{product.price | money }}
+            </span>
+            Sold Out</div>
+        {% endif %}
+      </div>
+      <div class="mid-btn-wrapper-service">
+        {% form "product", product %}
+          {% if product.variants.size > 1 %}
+            {% if product.options[0] %}
+              {% assign used = '' %}
+              <div class="product-options-flex-row">
+                <label>{{ product.options[0] }}
+                </label>
+                <div class="select-style">
+                  <select id='select-one' class="form-select-input w-select">
+                    {% for variant in product.variants %}
+                      {% unless used contains variant.option1 %}
+                        <option value="{{ variant.option1 }}">{{ variant.option1 }}
+                        </option>
+                        {% capture used %}
+                          {{ used }}
+                          {{ variant.option1 }}
+                        {% endcapture %}
+                      {% endunless %}
+                    {% endfor %}
+                  </select>
+                </div>
+              </div>
+
+            {% endif %}
+            {% if product.options[1] %}
+              {% assign used = '' %}
+              <div class="product-options-flex-row">
+                <label>{{ product.options[1] }}
+                </label>
+                <div class="select-style">
+                  <select id='select-two' class="form-select-input w-select">
+                    {% for variant in product.variants %}
+                      {% unless used contains variant.option2 %}
+                        <option value="{{ variant.option2 }}">{{ variant.option2 }}
+                        </option>
+                        {% capture used %}
+                          {{ used }}
+                          {{ variant.option2 }}
+                        {% endcapture %}
+                      {% endunless %}
+                    {% endfor %}
+                  </select>
+                </div>
+              </div>
+            {% endif %}
+            {% if product.options[2] %}
+              {% assign used = '' %}
+              <div class="product-options-flex-row">
+                <label>{{ product.options[2] }}
+                </label>
+                <div class="select-style">
+                  <select id='select-three' class="form-select-input w-select">
+                    {% for variant in product.variants %}
+                      {% unless used contains variant.option3 %}
+                        <option value="{{ variant.option3 }}">{{ variant.option3 }}
+                        </option>
+                        {% capture used %}
+                          {{ used }}
+                          {{ variant.option3 }}
+                        {% endcapture %}
+                      {% endunless %}
+                    {% endfor %}
+                  </select>
+                </div>
+              </div>
+            {% endif %}
+          {% endif %}
+          <input type="hidden" name="id" id="product-select" value="{{ product.variants.first.id }}"/>
+          <div class="product-options-flex-row">
+            <input type="number" class="product-page-input jc-product-input-hide w-input" value="1" min="1" name="quantity" id="field-2">
+          </div>
+          <div id="current-variant-id">{{variant_id}}
+          </div>
+          {%if product.id == 1123651780644 %}
+
+            <div class="product-properties-wrapper line-item-property__field">
+              <label>Please Enter Your Purchase Validation Code</label>
+              <input class="jc-product-page-input w-input" id="10-digit-code" type="text" name="properties[10 Digit Code]" required="required">
+              <div class="validate-success-message">
+                <span id="validate-success-code"></span>
+              </div>
+              <div class="validate-error-message">
+                Invalid entry. Approval by Cage Marshall is required and a unique code must be inputted in order to purchase this product.
+              </div>
+              <a id="product-validate-btn-10" href="#" class="product-validate-btn w-button">Validate Code</a>
+            </div>
+
+
+
+          {% elsif product.id == 7148156878884 or product.id == 7148156649508 %}
+
+
+            <div class="product-properties-wrapper line-item-property__field">
+              <label>ENTER MEMBER NUMBER</label>
+              <input class="jc-product-page-input w-input" id="4-digit-code" type="text" name="properties[4 Digit Code]" required="required">
+              <div class="validate-success-message">
+                <span id="validate-success-code"></span>
+              </div>
+              <div class="validate-error-message">
+                You must input your member number in order to continue purchasing this product.
+              </div>
+              <a id="product-validate-btn-4" href="#" class="product-validate-btn w-button">Validate Code</a>
+            </div>
+
+          {% elsif product.id == 7148155863076 or product.id == 7148150226980 %}
+
+            {%comment%}
+              { if variant_id == 40444798861348 %}
+            {%endcomment%}
+            <div class="product-properties-wrapper line-item-property__field">
+              <label>ENTER MEMBER NUMBER</label>
+              <input class="jc-product-page-input w-input" id="5-digit-code" type="text" name="properties[5 Digit Code]" required="required">
+              <div class="validate-success-message">
+                <span id="validate-success-code"></span>
+              </div>
+              <div class="validate-error-message">
+                You must input your member number in order to continue purchasing this product.
+              </div>
+              <a id="product-validate-btn-5" href="#" class="product-validate-btn w-button">Validate Code</a>
+            </div>
+
+
+
+          {%endif%}
+
+          <div class="product-btn-wrapper product-btn-wrapper-hide">
+            <input id="jc-add-to-cart-btn" type="submit" value="{{cart_btn_text}}" data-wait="Please wait..." class="mid-btn-product w-button" disabled="disabled">
+          </div>
+        {% endform %}
+      </div>
+    </div>
+
+
+    {% unless product.id ==   7148156878884 or product.id == 7148156649508 or product.id == 7148155863076 or product.id == 7148150226980  %}
+      <div class="bottom-wrapper-service">
+        <div class="bottom-content-block-sevice">
+          <div class="bottom-heading-wrapper-service">
+            <h4 class="bottom-heading-service">{{custom_heading_1}}
+            </h4>
+            <div class="bottom-heading-breaker-service"></div>
+          </div>
+          <div class="bottom-content-holder-service rte">
+            {{custom_content_1}}
+          </div>
+        </div>
+        <div class="bottom-content-block-sevice">
+          <div class="bottom-heading-wrapper-service">
+            <h4 class="bottom-heading-service">{{custom_heading_2}}
+            </h4>
+            <div class="bottom-heading-breaker-service"></div>
+          </div>
+          <div class="bottom-content-holder-service rte">
+            {{custom_content_2}}
+          </div>
+        </div>
+      {%endunless%}
+
+
+      <div class="bottom-content-block-sevice">
+        <div class="bottom-content-text-service rte">{{custom_content_bottom_text}}
+        </div>
+      </div>
+
+    </div>
+
+
+  </div>
+</div>
+
+{% unless product.id ==   7148156878884 or product.id == 7148156649508 or product.id == 7148155863076 or product.id == 7148150226980 %}
+  <div class="banner-cta">
+    <div class="banner-cta-content-wrapper">
+      <h3 class="banner-cta-heading-alt">WANT TO BUILD YOUR OWN PACKAGE?</h3>
+      <p class="banner-cta-text">Check out our Quick Shop page to choose the products that work best for you via an a-la-carte list.</p>
+      <div class="banner-cta-btn-wrapper">
+        <a href="/pages/quick-shop-airline" class="banner-cta-btn w-inline-block">
+          <div class="banner-cta-btn-breaker"></div>
+          <div>SHOP NOW</div>
+        </a>
+      </div>
+    </div>
+  </div>
+{%endunless%}
+
+
+
+<script type="text/javascript">
+  $(document).ready(function() {
+
+    $('#product-validate-btn-10').click(function() {
+
+      var code_val = $('#10-digit-code').val();
+      var code_length = code_val.length;
+      var code_starts_with = code_val.startsWith('AH');
+
+      if (code_length == 10 && code_starts_with == true) {
+
+        validateSuccess(code_val);
+
+      } else {
+
+        validateError();
+      }
+
+    });
+
+    $('#product-validate-btn-4').click(function() {
+
+      var code_val = $('#4-digit-code').val();
+      var code_length = code_val.length;
+      var code_starts_with = code_val.startsWith('AH');
+
+      if (code_length == 4) {
+
+        validateSuccess(code_val);
+
+      } else {
+
+        validateError();
+      }
+
+    });
+
+    $('#product-validate-btn-5').click(function() {
+
+      var code_val = $('#5-digit-code').val();
+      var code_length = code_val.length;
+      var code_starts_with = code_val.startsWith('AH');
+
+      if (code_length == 5) {
+
+        validateSuccess(code_val);
+
+      } else {
+
+        validateError();
+      }
+
+    });
+
+    function validateSuccess(code_value) {
+      var elm_to_show = $('.product-btn-wrapper.product-btn-wrapper-hide');
+      var elm_to_hide = $('#product-validate-btn-10');
+      var elm_to_hide_1 = $('#product-validate-btn-5');
+      var elm_to_hide_3 = $('#product-validate-btn-4');
+      var elm_to_hide_2 = $('.validate-error-message');
+      $('#10-digit-code').css('display', 'none');
+      $('#4-digit-code').css('display', 'none');
+      $('#5-digit-code').css('display', 'none');
+      $('#jc-add-to-cart-btn').removeAttr('disabled');
+      $('.validate-success-message ').css('display', 'block');
+      $('#validate-success-code').html(code_value);
+      elm_to_show.css('display', 'block');
+      elm_to_hide.css('display', 'none');
+      elm_to_hide_1.css('display', 'none');
+      elm_to_hide_2.css('display', 'none');
+      elm_to_hide_3.css('display', 'none');
+    }
+
+    function validateError() {
+      var elm_to_show = $('.validate-error-message');
+      var elm_to_hide = $('.product-btn-wrapper.product-btn-wrapper-hide');
+
+      elm_to_show.css('display', 'block');
+      elm_to_hide.css('display', 'none');
+    }
+
+
+  });
+</script>

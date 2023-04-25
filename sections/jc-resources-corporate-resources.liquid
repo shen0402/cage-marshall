@@ -1,0 +1,84 @@
+<div class="bottom-content-block-resources">
+  <div class="bottom-heading-wrapper-resources">
+    <h4 class="bottom-heading-resources">{{section.settings.heading_text}}</h4>
+    <div class="bottom-heading-breaker-resources"></div>
+  </div>
+  <div class="bottom-content-holder-resources">
+    <p class="bottom-content-text-heading-resources">{{section.settings.sub_heading_text}}</p>
+    <div class="bottom-flex-row-resources">
+
+      {% for block in section.blocks %}
+        <div class="bottom-flex-col-resources">
+          <a href="{{block.settings.resource_url}}" class="bottom-flex-link-resources w-inline-block" target="_blank">
+            {% if block.settings.resource_img != blank %}
+            <img class="resource-img" src="{{ block.settings.resource_img | img_url }}">
+          {%else%}
+            <div class="resource-img"></div>
+          {% endif %}
+            <div>{{block.settings.resource_name}}</div>
+            <div class="bottom-flex-link-text-alt-resources">[{{block.settings.resource_type}}]</div>
+          </a>
+        </div>
+     {% endfor %}
+
+    </div>
+  </div>
+</div>
+
+
+
+{% schema %}
+{
+  "name": "Pilot Job Boards" ,
+
+  "settings": [
+      {
+         "type": "text",
+         "id": "heading_text",
+         "default": "CORPORATE / CHARTER RESOURCES",
+         "label": "Heading Text"
+      },
+      {
+         "type": "textarea",
+         "id": "sub_heading_text",
+         "default": "This is a list of online job boards and postings for different types of pilot jobs.",
+         "label": "Sub Heading Text"
+      }
+
+  ],
+  
+  "blocks": [
+    {
+      "type": "text",
+      "name": "Pilot Job Board",
+      "settings": [
+        
+        {
+          "label": "Name",
+          "id": "resource_name",
+          "type": "text"
+        },
+        {
+          "label": "Resource URL",
+          "id": "resource_url",
+          "type": "url"
+        },
+        {
+          "label": "Sub Heading",
+          "id": "resource_type",
+          "type": "text"
+        },
+        {
+          "label": "Resource Image",
+          "id": "resource_img",
+          "type": "image_picker"
+        }
+       
+
+      ]
+    }
+  ]
+}
+{% endschema %}
+
+

@@ -1,0 +1,69 @@
+{% for block in section.blocks %}
+{% comment %}
+  {{block.settings.press_date}}
+{% endcomment %}
+{% endfor %}
+
+{% comment %}
+<script type="text/javascript">
+  $('.hero-scroll-link').click(function()
+        {
+          $('html, body').animate({
+              scrollTop: $( $.attr(this, 'href') ).offset().top-92
+          }, 1000);
+          return false;
+        });
+</script>
+{% endcomment %}
+
+
+
+{% schema %}
+{
+  "name": "Section Name" ,
+  "settings": [
+      {
+         "type": "text",
+         "id": "heading_text",
+         "default": "This is a heading",
+         "label": "Heading Text"
+      }
+  ],
+  "blocks": [
+    {
+      "type": "text",
+      "name": "Event",
+      "settings": [
+        
+        {
+          "label": "Text Content",
+          "id": "text_content",
+          "type": "text"
+        },
+        {
+          "label": "Text Area",
+          "id": "text_area",
+          "type": "textarea"
+        },
+        {
+           "label": "Rich Text",
+           "id": "rich_text", 
+           "type": "richtext",
+           "default": "<p>This is a rich text element</p>"
+        },
+        {
+          "label": "Image",
+          "id": "image_example",
+          "type": "image_picker"
+        },
+        {
+          "label": "URL To Events",
+          "id": "event_url",
+          "type": "url"
+        }
+
+      ]
+    }
+  ]
+}
+{% endschema %}

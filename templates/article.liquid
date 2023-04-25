@@ -1,0 +1,28 @@
+{% comment %}
+<div class="" {% if article.image %}style="background-image: url({{ article.image | img_url: '800x' }});"{% endif %}></div>
+{% endcomment %}
+<div class="article-hero-wrapper">
+	<div class="container-mid">
+		<div class="article-heading-wrapper">
+			<h1 class="article-heading">{{ article.title }}</h1>
+			<div class="article-date-heading hidden">{{ article.published_at | time_tag: format: 'date' }}</div>
+		</div>
+		{% if article.image %}
+			<div class="article-img-wrapper">
+				<img src="{{ article.image | img_url: '1000x' }}" class="article-main-img">
+			</div>
+		{% endif %}
+	</div>
+</div>
+
+
+<div class= "meta-content-wrapper-article">
+	<div class="container-small rte">
+		{{ article.content }}
+	</div>
+	<div class="article-btn-wrapper">
+		<a href="/blogs/posts" class="btn-border-dark w-button">Back to All Blogs</a>
+	</div>
+</div>
+
+

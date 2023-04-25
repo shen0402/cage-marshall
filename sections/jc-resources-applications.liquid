@@ -1,0 +1,75 @@
+<div class="bottom-content-block-resources">
+  <div class="bottom-heading-wrapper-resources">
+    <h4 class="bottom-heading-resources">{{section.settings.heading_text}}</h4>
+    <div class="bottom-heading-breaker-resources"></div>
+  </div>
+  <div class="bottom-content-holder-resources">
+    <p class="bottom-content-text-heading-resources">{{section.settings.sub_heading_text}}</p>
+    <div class="bottom-flex-row-resources">
+
+      {% for block in section.blocks %}
+        <div class="bottom-flex-col-resources">
+          <a href="{{block.settings.resource_url}}" class="bottom-flex-link-resources w-inline-block" target="_blank">
+            {% if block.settings.resource_img != blank %}
+            <img class="resource-img" src="{{ block.settings.resource_img | img_url }}">
+          {%else%}
+            <div class="resource-img"></div>
+          {% endif %}
+            <div>{{block.settings.resource_name}}</div>
+          </a>
+        </div>
+      {% endfor %}
+
+
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Applications - Resources" ,
+
+  "settings": [
+      {
+         "type": "text",
+         "id": "heading_text",
+         "default": "Applications",
+         "label": "Heading Text"
+      },
+      {
+         "type": "textarea",
+         "id": "sub_heading_text",
+         "default": "These applications help you easily track your credentials online.",
+         "label": "Sub Heading Text"
+      }
+
+  ],
+  
+  "blocks": [
+    {
+      "type": "text",
+      "name": "Application Resource",
+      "settings": [
+        
+        {
+          "label": "Name",
+          "id": "resource_name",
+          "type": "text"
+        },
+        {
+          "label": "Resource URL",
+          "id": "resource_url",
+          "type": "url"
+        },
+        {
+          "label": "Resource Image",
+          "id": "resource_img",
+          "type": "image_picker"
+        }
+        
+
+      ]
+    }
+  ]
+}
+{% endschema %}
